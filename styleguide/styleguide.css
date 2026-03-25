@@ -1,5 +1,5 @@
 :root {
-  --slate: #222831; /* Teksti, otsikot */
+  --slate: #222831; /* Teksti, otsikot – rgba(34, 40, 49)*/
   --graphite: #393e46; /* Toissijainen teksti */
   --teal: #00adb5; /* Tehosteväri */
   --fog: #eeeeee; /* Tausta */
@@ -11,6 +11,141 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f4f5f7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* TYPOGRAFIA */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+small {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--graphite);
+}
+
+.text-caption {
+  font-size: 0.8rem;
+  color: var(--teal);
+}
+
+/* PADDING */
+.p-4 {
+  padding: 0.25rem;
+}
+
+.p-8 {
+  padding: 0.5rem;
+}
+
+.p-12 {
+  padding: 0.75rem;
+}
+
+.p-16 {
+  padding: 1rem;
+}
+
+.p-20 {
+  padding: 1.25rem;
+}
+.p-24 {
+  padding: 1.5rem;
+}
+.p-32 {
+  padding: 2rem;
+}
+.p-40 {
+  padding: 2.5rem;
+}
+.p-48 {
+  padding: 3rem;
+}
+.p-64 {
+  padding: 4rem;
+}
+.p-80 {
+  padding: 5rem;
+}
+
+/* Tyyliohjesivu-spesifit */
 .container {
   max-width: 768px;
+  padding: 2rem;
+}
+
+.paletti {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.paletti-info {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0 0 1rem 1rem;
+  border: 1px solid rgba(34, 40, 49, 0.1);
+  border-top: none;
+  box-shadow: 0 2px 8px rgba(34, 40, 49, 0.06);
+}
+
+.slate,
+.graphite,
+.teal,
+.fog {
+  min-height: 6rem;
+  border-radius: 1rem 1rem 0 0;
+  border: 1px solid rgba(34, 40, 49, 0.1);
+  border-bottom: none;
+  box-shadow: 0 2px 8px rgba(34, 40, 49, 0.06);
+}
+
+.slate {
+  background-color: var(--slate);
+}
+
+.graphite {
+  background-color: var(--graphite);
+}
+
+.teal {
+  background-color: var(--teal);
+}
+
+.fog {
+  background-color: var(--fog);
 }
