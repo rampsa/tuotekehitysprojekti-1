@@ -1,0 +1,16 @@
+:root {
+  --slate: #222831; /* Teksti, otsikot */
+  --graphite: #393e46; /* Toissijainen teksti */
+  --teal: #00adb5; /* Tehosteväri */
+  --fog: #eeeeee; /* Tausta */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 768px;
+}
