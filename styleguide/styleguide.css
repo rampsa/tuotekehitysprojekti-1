@@ -1,14 +1,18 @@
 :root {
-  --slate: #222831; /* Teksti, otsikot – rgba(34, 40, 49)*/
-  --graphite: #393e46; /* Toissijainen teksti */
-  --teal: #00adb5; /* Tehosteväri */
-  --fog: #eeeeee; /* Tausta */
+  --slate: 34, 40, 49; /* Teksti, otsikot */
+  --graphite: 57, 62, 70; /* Toissijainen teksti */
+  --teal: 0, 173, 181; /* Tehosteväri */
+  --fog: 238, 238, 238; /* Tausta */
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -16,11 +20,13 @@ html {
 }
 
 body {
-  background-color: #f4f5f7;
+  background-color: rgba(var(--fog), 0.4);
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
 }
 
 /* TYPOGRAFIA */
@@ -36,31 +42,34 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  line-height: 2;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.5rem;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.074rem;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.728rem;
 }
 
 h3 {
-  font-size: 1.15rem;
+  font-size: 1.44rem;
 }
 
 small {
   font-size: 0.8rem;
   font-weight: 300;
-  color: var(--graphite);
+  color: rgba(var(--graphite));
 }
 
 .text-caption {
   font-size: 0.8rem;
-  color: var(--teal);
+  color: rgba(var(--teal));
 }
 
 /* PADDING */
@@ -104,23 +113,56 @@ small {
 
 /* Tyyliohjesivu-spesifit */
 .container {
-  max-width: 768px;
+  min-width: 768px;
   padding: 2rem;
 }
 
-.paletti {
+.palette {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.paletti-info {
+.palette div:last-child {
+  grid-column: 1 / -1;
+}
+
+.palette-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.palette-info div {
+  flex-grow: 1;
+}
+
+.palette-info span {
+  color: rgba(var(--graphite));
+  font-weight: 300;
+}
+
+.palette-info .variables div {
+  background-color: rgba(var(--teal), 0.1);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.palette-info .variables div p {
+  color: rgba(var(--teal));
+}
+
+.card,
+.card-lower {
   padding: 1rem;
   background-color: #fff;
+  border-radius: 1rem;
+  border: 1px solid rgba(var(--slate), 0.1);
+  box-shadow: 0 2px 8px rgba(var(--slate), 0.06);
+}
+
+.card-lower {
   border-radius: 0 0 1rem 1rem;
-  border: 1px solid rgba(34, 40, 49, 0.1);
   border-top: none;
-  box-shadow: 0 2px 8px rgba(34, 40, 49, 0.06);
 }
 
 .slate,
@@ -129,23 +171,23 @@ small {
 .fog {
   min-height: 6rem;
   border-radius: 1rem 1rem 0 0;
-  border: 1px solid rgba(34, 40, 49, 0.1);
+  border: 1px solid rgba(var(--slate), 0.1);
   border-bottom: none;
-  box-shadow: 0 2px 8px rgba(34, 40, 49, 0.06);
+  box-shadow: 0 2px 8px rgba(var(--slate), 0.06);
 }
 
 .slate {
-  background-color: var(--slate);
+  background-color: rgba(var(--slate));
 }
 
 .graphite {
-  background-color: var(--graphite);
+  background-color: rgba(var(--graphite));
 }
 
 .teal {
-  background-color: var(--teal);
+  background-color: rgba(var(--teal));
 }
 
 .fog {
-  background-color: var(--fog);
+  background-color: rgba(var(--fog));
 }
