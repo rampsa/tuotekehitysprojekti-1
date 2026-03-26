@@ -167,3 +167,20 @@ hr {
 }
 
 /* NOTE: Ilmoitukset */
+
+/* Break Pointit */
+/* Pienet tabletit ja isommat mobiililaitteet (481px - 768px) */
+@media (min-width: 481px) {
+}
+
+/* Tabletit ja pienemmät desktopit */
+@media (min-width: 769px) {
+  .cards-inner {
+    display: flex;
+    gap: var(--default-element-padding);
+  }
+}
+
+/* Isommat desktopit */
+@media (min-width: 1025px) {
+}
