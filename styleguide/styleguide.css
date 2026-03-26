@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 :root {
   --slate: 34, 40, 49; /* Teksti, otsikot */
   --graphite: 113, 117, 125; /* Toissijainen teksti */
@@ -22,8 +24,6 @@
   --default-element-margin: 1rem 0;
   --default-border-radius: 1rem;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 * {
   margin: 0;
@@ -101,6 +101,7 @@ h6 {
   line-height: 1.4;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 0.05rem;
   color: rgb(var(--teal));
 }
 
@@ -142,23 +143,26 @@ hr {
   box-shadow: 0 2px 8px rgba(var(--slate), 0.07);
 }
 
+.card p {
+  font-size: var(--p-scaled-down);
+}
+
 .card-accent {
   background-color: rgba(var(--teal), 0.2);
   border: 1px solid rgba(var(--teal), 0.2);
 }
 
-.card .tag {
-  display: inline;
+.card small {
   text-transform: uppercase;
-  font-size: var(--p-scaled-down);
   padding: var(--default-text-padding);
   background-color: rgb(var(--fog));
   border-radius: var(--default-border-radius);
   border: 1px solid rgba(var(--slate), 0.1);
 }
 
-.card-accent .tag {
+.card-accent small {
   background-color: rgba(var(--teal), 0.2);
+  color: rgb(var(--teal));
   border: 1px solid rgb(var(--teal));
 }
 
