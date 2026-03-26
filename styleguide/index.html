@@ -3,177 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FixIT Mobile tyyliohje</title>
+    <title>FixIT tyyliohje</title>
     <link rel="stylesheet" href="styleguide.css" />
   </head>
   <body>
     <div class="container">
-      <h1>FixIT Mobile tyyliohje</h1>
+      <h1>FixIT tyyliohje</h1>
+
+      <!-- Väripaletti -->
+      <h2>Väripaletti</h2>
+
+      <!-- Typografia -->
+      <h2>Typografia</h2>
+
+      <!-- Välistys -->
+      <h2>Välistys</h2>
+
+      <!-- Painikkeet -->
+      <h2>Painikkeet</h2>
+
+      <!-- Lomakkeet -->
+      <h2>Lomakkeet</h2>
+
+      <!-- Kortit -->
       <section>
-        <h2>Väripaletti</h2>
-        <div class="palette">
-          <div>
-            <div class="slate"></div>
-            <div class="card-lower">
-              <p>Slate</p>
-              <small>#222831 / RGB(238, 238, 238)</small>
-              <p class="text-accent">Teksti, otsikot</p>
-            </div>
-          </div>
-          <div>
-            <div class="graphite"></div>
-            <div class="card-lower">
-              <p>Graphite</p>
-              <small>#393E46 / RGB(238, 238, 238)</small>
-              <p class="text-accent">Toissijainen teksti</p>
-            </div>
-          </div>
-          <div>
-            <div class="teal"></div>
-            <div class="card-lower">
-              <p>Teal</p>
-              <small>#00ADB5 / RGB(0, 173, 181)</small>
-              <p class="text-accent">Tehosteväri</p>
-            </div>
-          </div>
-          <div>
-            <div class="fog"></div>
-            <div class="card-lower">
-              <p>Fog</p>
-              <small>#EEEEEE / RGB(238, 238, 238)</small>
-              <p class="text-accent">Tausta, pinnat</p>
-            </div>
-          </div>
-          <div class="palette-info card">
-            <div class="usage">
-              <h3>Käyttö</h3>
-              <p>Slate <span>– otsikot ja pääasiallien teksti</span></p>
-              <p>Graphite <span>– Toissijainen teksti ja kuvaukset</span></p>
-              <p>Teal <span>– Painikkeet, linkit, korostukset</span></p>
-              <p>Fog <span>– tausta ja pinnat</span></p>
-            </div>
-            <div class="variables">
-              <h3>Väripaletti-muuttujat</h3>
-              <div>
-                <p>--slate: 34, 40, 49;</p>
-                <p>--graphite: 57, 62, 70;</p>
-                <p>--teal: 0, 173, 181;</p>
-                <p>--fog: 238, 238, 238;</p>
-              </div>
-            </div>
-          </div>
+        <h2>Kortit</h2>
+        <div class="card">
+          <p class="text-accent">Oletus</p>
+          <h3>Kortin otsikko</h3>
+          <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint blanditiis iure repudiandae, temporibus consequatur, delectus vel quasi doloremque impedit veritatis labore eligendi cumque ratione minus ea. Odio maiores hic voluptatem!</small>
+          <hr />
+          <p class="tag">Tunniste</p>
+        </div>
+        <div class="card card-accent">
+          <p class="text-accent">Korostettu</p>
+          <h3>Tärkeä sisältö</h3>
+          <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint blanditiis iure repudiandae, temporibus consequatur, delectus vel quasi doloremque impedit veritatis labore eligendi cumque ratione minus ea. Odio maiores hic voluptatem!</small>
+          <hr />
+          <p class="tag">Tunniste</p>
         </div>
       </section>
-      <section>
-        <h2>Typografia</h2>
-        <div class="typography card">
-          <div class="fonts-info">
-            <div class="font">
-              <p class="text-accent">Fontti</p>
-              <p class="font-display">DM Sans</p>
-              <small>Google Fonts: Kirjasimen korostus 100-1000</small>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">H1</p>
-                <small>2.074 rem / 500</small>
-              </div>
-              <div>
-                <h1>Heading 1</h1>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">H2</p>
-                <small>1.728 rem / 500</small>
-              </div>
-              <div>
-                <h2>Heading 2</h2>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">H3</p>
-                <small>1.44 rem / 500</small>
-              </div>
-              <div>
-                <h3>Heading 3</h3>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">H4</p>
-                <small>1.2 rem / 500</small>
-              </div>
-              <div>
-                <h4>Heading 4</h4>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">H5</p>
-                <small>1.096 rem / 500</small>
-              </div>
-              <div>
-                <h5>Heading 5</h5>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">H6</p>
-                <small>1 rem / 500</small>
-              </div>
-              <div>
-                <h6>Heading 6</h6>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">P</p>
-                <small>1 rem / 400</small>
-              </div>
-              <div>
-                <p>Paragraph</p>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">.text-accent</p>
-                <small>0.833 rem / 400</small>
-              </div>
-              <div>
-                <p class="text-accent">Text accent</p>
-              </div>
-            </div>
-            <div class="fonts-info-inner">
-              <div>
-                <p class="font-display">SMALL</p>
-                <small>0.761 rem / 400</small>
-              </div>
-              <div>
-                <small>Small</small>
-              </div>
-            </div>
-          </div>
-          <div class="font-variables">
-            <div class="variables">
-              <h3>Typografia-muuttujat</h3>
-              <div>
-                <p>--base-font-size: 16px;</p>
-                <p>--font-family: "DM Sans", system-ui, sans-serif;</p>
-                <p>--h1-font-size: 2.074rem;</p>
-                <p>--h2-font-size: 1.728rem;</p>
-                <p>--h3-font-size: 1.44rem;</p>
-                <p>--h4-font-size: 1.2rem;</p>
-                <p>--h5-font-size: 1.096rem;</p>
-                <p>--h6-font-size: 1rem;</p>
-                <p>--text-accent-font-size: 0.833rem;</p>
-                <p>--small-font-size: 0.761rem;</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <!-- Ilmoitukset -->
+      <h2>Ilmoitukset</h2>
     </div>
   </body>
 </html>
