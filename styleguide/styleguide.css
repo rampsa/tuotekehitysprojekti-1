@@ -14,6 +14,7 @@
   --h6-font-size: 1rem;
   --text-accent-font-size: 0.833rem;
   --small-font-size: 0.761rem;
+  --p-scaled-down: calc(var(--base-font-size) * 0.8);
 
   --default-text-padding: 0.5rem;
   --default-element-padding: 1rem;
@@ -60,7 +61,7 @@ h5,
 h6 {
   margin: var(--default-text-margin);
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--slate);
 }
 
@@ -149,7 +150,7 @@ hr {
 .card .tag {
   display: inline;
   text-transform: uppercase;
-  font-size: calc(var(--base-font-size) * 0.8);
+  font-size: var(--p-scaled-down);
   padding: var(--default-text-padding);
   background-color: rgb(var(--fog));
   border-radius: var(--default-border-radius);
@@ -158,7 +159,6 @@ hr {
 
 .card-accent .tag {
   background-color: rgba(var(--teal), 0.2);
-  color: rgb(var(--teal));
   border: 1px solid rgb(var(--teal));
 }
 
@@ -167,6 +167,35 @@ hr {
 }
 
 /* NOTE: Ilmoitukset */
+.notification {
+  margin: var(--default-element-margin);
+  padding: var(--default-text-padding);
+  border-radius: calc(var(--default-border-radius) / 4);
+}
+
+.notification p {
+  font-size: var(--p-scaled-down);
+}
+
+.notifications-inner .info {
+  background-color: rgba(0, 174, 181, 0.1);
+  border-left: 5px solid rgb(0, 174, 181);
+}
+
+.notifications-inner .success {
+  background-color: rgba(40, 175, 96, 0.1);
+  border-left: 5px solid rgb(40, 175, 96);
+}
+
+.notifications-inner .warning {
+  background-color: rgba(230, 126, 35, 0.1);
+  border-left: 5px solid rgb(230, 126, 35);
+}
+
+.notifications-inner .error {
+  background-color: rgba(192, 58, 43, 0.1);
+  border-left: 5px solid rgb(192, 58, 43);
+}
 
 /* Break Pointit */
 /* Pienet tabletit ja isommat mobiililaitteet (481px - 768px) */
@@ -175,6 +204,14 @@ hr {
 
 /* Tabletit ja pienemmät desktopit */
 @media (min-width: 769px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 768px;
+  }
   .cards-inner {
     display: flex;
     gap: var(--default-element-padding);
