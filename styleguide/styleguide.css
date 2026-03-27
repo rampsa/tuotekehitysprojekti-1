@@ -7,7 +7,8 @@
   --fog: 238, 238, 238; /* Tausta */
 
   --base-font-size: 16px;
-  --font-family: "DM Sans", system-ui, sans-serif;
+  --base-scaled-down: calc(var(--base-font-size) * 0.8);
+  --font-family: "DM Sans", sans-serif;
   --h1-font-size: 2.074rem;
   --h2-font-size: 1.728rem;
   --h3-font-size: 1.44rem;
@@ -16,7 +17,6 @@
   --h6-font-size: 1rem;
   --text-accent-font-size: 0.833rem;
   --small-font-size: 0.761rem;
-  --p-scaled-down: calc(var(--base-font-size) * 0.8);
 
   --default-text-padding: 0.5rem;
   --default-element-padding: 1rem;
@@ -36,18 +36,22 @@ html {
 }
 
 body {
-  background-color: rgba(var(--fog), 0.4);
+  background-color: rgba(var(--fog), 0.3);
   font-family: var(--font-family);
-  font-size: 1rem;
+  font-size: var(--base-font-size);
   font-weight: 400;
   line-height: 1.6;
   color: var(--slate);
 }
 
+section {
+  margin-bottom: 2rem;
+}
+
 p {
   margin: var(--default-text-margin);
   font-family: var(--font-family);
-  font-size: 1rem;
+  font-size: var(--base-font-size);
   font-weight: 400;
   line-height: 1.6;
   color: var(--slate);
@@ -113,17 +117,49 @@ small {
   color: rgb(var(--graphite));
 }
 
-/* TODO: Tyyliohjesivu-spesifit */
-.container {
-  padding: 1rem;
-}
-
-hr {
-  margin: var(--default-element-margin);
-  border: 1px solid rgba(var(--fog), 0.5);
-}
-
 /* NOTE: Väripaletti */
+.slate,
+.graphite,
+.teal,
+.fog {
+  margin: var(--default-element-margin);
+}
+
+.slate-upper,
+.graphite-upper,
+.teal-upper,
+.fog-upper {
+  min-height: 3rem;
+  border: 1px solid rgba(var(--slate), 0.1);
+  border-bottom: none;
+  border-radius: var(--default-border-radius) var(--default-border-radius) 0 0;
+  box-shadow: 0 2px 8px rgba(var(--slate), 0.07);
+}
+
+.slate-upper {
+  background-color: rgb(var(--slate));
+}
+
+.graphite-upper {
+  background-color: rgb(var(--graphite));
+}
+
+.teal-upper {
+  background-color: rgb(var(--teal));
+}
+
+.fog-upper {
+  background-color: rgb(var(--fog));
+}
+
+.color-lower {
+  padding: calc(var(--default-element-padding) / 2) var(--default-element-padding);
+  background-color: #fff;
+  border: 1px solid rgba(var(--slate), 0.1);
+  border-top: none;
+  border-radius: 0 0 var(--default-border-radius) var(--default-border-radius);
+  box-shadow: 0 2px 8px rgba(var(--slate), 0.07);
+}
 
 /* NOTE: Typografia */
 
@@ -144,16 +180,23 @@ hr {
 }
 
 .card p {
-  font-size: var(--p-scaled-down);
+  font-size: var(--base-scaled-down);
+}
+
+.card hr {
+  margin: var(--default-element-margin);
+  border: 1px solid rgba(var(--fog), 0.5);
 }
 
 .card-accent {
   background-color: rgba(var(--teal), 0.2);
   border: 1px solid rgba(var(--teal), 0.2);
+  box-shadow: 0 2px 8px rgba(var(--teal), 0.2);
 }
 
 .card small {
   text-transform: uppercase;
+  letter-spacing: 0.05rem;
   padding: var(--default-text-padding);
   background-color: rgb(var(--fog));
   border-radius: var(--default-border-radius);
@@ -161,9 +204,9 @@ hr {
 }
 
 .card-accent small {
-  background-color: rgba(var(--teal), 0.2);
-  color: rgb(var(--teal));
-  border: 1px solid rgb(var(--teal));
+  background-color: rgb(var(--teal));
+  color: rgb(var(--slate));
+  border: 1px solid rgba(var(--slate), 0.3);
 }
 
 .card-accent hr {
@@ -178,7 +221,7 @@ hr {
 }
 
 .notification p {
-  font-size: var(--p-scaled-down);
+  font-size: var(--base-scaled-down);
 }
 
 .notifications-inner .info {
@@ -201,9 +244,39 @@ hr {
   border-left: 5px solid rgb(192, 58, 43);
 }
 
+/* TODO: Tyyliohjesivu-spesifit */
+.container {
+  padding: 1rem;
+}
+
 /* Break Pointit */
 /* Pienet tabletit ja isommat mobiililaitteet (481px - 768px) */
 @media (min-width: 481px) {
+  /* NOTE: Väripaletti */
+  .palette-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--default-element-padding);
+
+    .slate,
+    .graphite,
+    .teal,
+    .fog {
+      margin: 0;
+    }
+  }
+
+  /* NOTE: Typografia */
+
+  /* NOTE: Välistys */
+
+  /* NOTE: Painikkeet */
+
+  /* NOTE: Lomakkeet */
+
+  /* NOTE: Kortit */
+
+  /* NOTE: Ilmoitukset */
 }
 
 /* Tabletit ja pienemmät desktopit */
@@ -216,12 +289,68 @@ hr {
   .container {
     max-width: 768px;
   }
+
+  /* NOTE: Väripaletti */
+  .palette-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--default-element-padding);
+
+    .slate,
+    .graphite,
+    .teal,
+    .fog {
+      margin: 0;
+    }
+  }
+
+  /* NOTE: Typografia */
+
+  /* NOTE: Välistys */
+
+  /* NOTE: Painikkeet */
+
+  /* NOTE: Lomakkeet */
+
+  /* NOTE: Kortit */
   .cards-inner {
     display: flex;
     gap: var(--default-element-padding);
   }
+
+  /* NOTE: Ilmoitukset */
 }
 
 /* Isommat desktopit */
 @media (min-width: 1025px) {
+  /* NOTE: Väripaletti */
+  .palette-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    gap: var(--default-element-padding);
+  }
+
+  .slate,
+  .graphite,
+  .teal,
+  .fog {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .color-lower {
+    height: 100%;
+  }
+  /* NOTE: Typografia */
+
+  /* NOTE: Välistys */
+
+  /* NOTE: Painikkeet */
+
+  /* NOTE: Lomakkeet */
+
+  /* NOTE: Kortit */
+
+  /* NOTE: Ilmoitukset */
 }
