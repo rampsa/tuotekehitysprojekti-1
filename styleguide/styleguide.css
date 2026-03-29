@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  background-color: rgba(var(--fog), 0.3);
+  background-color: rgba(var(--fog), 0.1);
   font-family: var(--font-family);
   font-size: var(--base-font-size);
   font-weight: 400;
@@ -207,6 +207,44 @@ code {
 }
 
 /* NOTE: Painikkeet */
+.buttons-inner {
+  margin: var(--default-element-margin);
+}
+
+.buttons-inner button {
+  /* Style guide -sivua varten. Muuten voi poistaa */
+  margin-right: 0.5rem;
+}
+
+button {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  padding: var(--default-text-padding) calc(var(--default-text-padding) * 2);
+  margin: var(--default-element-margin);
+  background-color: rgb(var(--teal));
+  color: rgb(var(--slate));
+  border: 1px solid rgb(var(--teal));
+  border-radius: calc(var(--default-border-radius) / 4);
+}
+
+.btn-secondary {
+  color: rgb(var(--graphite));
+  background-color: #fff;
+  border: 1px solid rgb(var(--graphite));
+}
+
+.btn-small {
+  padding: calc(var(--default-text-padding) / 4) calc(var(--default-text-padding) * 2);
+}
+
+.btn-large {
+  padding: calc(var(--default-text-padding) * 2) calc(var(--default-text-padding) * 2);
+}
+
+.btn-inactive {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
 /* NOTE: Lomakkeet */
 
