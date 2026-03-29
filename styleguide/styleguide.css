@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
   --slate: 34, 40, 49; /* Teksti, otsikot */
@@ -20,8 +21,11 @@
 
   --default-text-padding: 0.5rem;
   --default-element-padding: 1rem;
+
   --default-text-margin: 0.5rem 0;
+  --default-paragraph-margin: 0.5rem 0 0 0;
   --default-element-margin: 1rem 0;
+
   --default-border-radius: 1rem;
 }
 
@@ -48,8 +52,12 @@ section {
   margin-bottom: 2rem;
 }
 
+section:first-of-type {
+  margin-top: 2rem;
+}
+
 p {
-  margin: var(--default-text-margin);
+  margin: var(--default-paragraph-margin);
   font-family: var(--font-family);
   font-size: var(--base-font-size);
   font-weight: 400;
@@ -100,7 +108,7 @@ h6 {
 }
 
 .text-accent {
-  margin: var(--default-text-margin);
+  margin: 0;
   font-size: var(--text-accent-font-size);
   line-height: 1.4;
   font-weight: 400;
@@ -115,6 +123,16 @@ small {
   line-height: 1.5;
   font-weight: 400;
   color: rgb(var(--graphite));
+}
+
+code {
+  margin: var(--default-paragraph-margin);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: rgba(var(--teal), 0.2);
+  color: rgb(var(--teal));
 }
 
 /* NOTE: Väripaletti */
@@ -162,8 +180,31 @@ small {
 }
 
 /* NOTE: Typografia */
+.typography-inner .font-family,
+.typography-inner .font {
+  margin: var(--default-element-margin);
+}
+
+.typography-inner hr {
+  border: 1px solid rgba(var(--fog), 1);
+}
 
 /* NOTE: Välistys */
+.py-1 {
+  padding: 0.5rem 0;
+}
+.py-2 {
+  padding: 1rem 0;
+}
+.py-3 {
+  padding: 1.5rem 0;
+}
+.py-4 {
+  padding: 2rem 0;
+}
+.py-5 {
+  padding: 2.5rem 0;
+}
 
 /* NOTE: Painikkeet */
 
@@ -244,7 +285,7 @@ small {
   border-left: 5px solid rgb(192, 58, 43);
 }
 
-/* TODO: Tyyliohjesivu-spesifit */
+/* NOTE: Tyyliohjesivu-spesifit */
 .container {
   padding: 1rem;
 }
@@ -267,6 +308,15 @@ small {
   }
 
   /* NOTE: Typografia */
+  .font {
+    display: flex;
+    align-items: center;
+  }
+
+  .font .font-info {
+    width: 10rem;
+    flex-shrink: 0;
+  }
 
   /* NOTE: Välistys */
 
