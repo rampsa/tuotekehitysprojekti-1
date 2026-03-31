@@ -302,11 +302,24 @@ code {
 }
 
 /* NOTE: Painikkeet */
+.buttons-inner {
+  display: grid;
+  gap: var(--default-margin);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn-types,
+.btn-sizes,
+.btn-state {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-margin);
+}
+
 button {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
   padding: calc(var(--default-padding) / 2) var(--default-padding);
-  margin: var(--default-margin) 0;
   background-color: rgb(var(--teal));
   color: rgb(var(--slate));
   border: 1px solid rgb(var(--teal));
@@ -354,7 +367,7 @@ form textarea {
 }
 
 form textarea {
-  max-width: 100%;
+  resize: none;
   min-height: 8rem;
 }
 
@@ -427,15 +440,6 @@ form textarea {
 .notifications-inner .error {
   background-color: rgba(192, 58, 43, 0.1);
   border-left: 5px solid rgb(192, 58, 43);
-}
-
-/* NOTE: Tyyliohjesivu-spesifit. Muussa käytössä saa poistaa */
-.container {
-  padding: 1rem;
-}
-
-.buttons-inner button {
-  margin-right: 1rem;
 }
 
 /* Break Pointit */
@@ -511,12 +515,31 @@ form textarea {
   /* NOTE: Välistys */
 
   /* NOTE: Painikkeet */
+  .btn-sizes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
   /* NOTE: Lomakkeet */
-  form input,
-  form select,
-  form textarea {
-    width: 50%;
+  form {
+    display: flex;
+    gap: var(--default-margin);
+    align-items: stretch;
+  }
+
+  form .details,
+  form .message {
+    flex: 1;
+  }
+
+  form .message {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form .message textarea {
+    flex: 1;
   }
 
   /* NOTE: Kortit */
@@ -546,9 +569,6 @@ form textarea {
     flex-direction: column;
   }
 
-  .color-lower {
-    height: 100%;
-  }
   /* NOTE: Typografia */
 
   /* NOTE: Välistys */

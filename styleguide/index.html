@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styleguide.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container p-2">
       <h1>FixIT tyyliohje</h1>
 
       <!-- Väripaletti -->
@@ -231,15 +231,21 @@
         <h2>Painikkeet</h2>
         <div class="buttons-inner">
           <p class="text-accent">Tyypit</p>
-          <button>Ensisijainen</button>
-          <button class="btn-secondary">Toissijainen</button>
           <p class="text-accent">Koot</p>
-          <button class="btn-small">Pieni</button>
-          <button>Oletus</button>
-          <button class="btn-large">Suuri</button>
           <p class="text-accent">Tila</p>
-          <button>Aktiivinen</button>
-          <button class="btn-inactive">Ei käytössä</button>
+          <div class="btn-types">
+            <button>Ensisijainen</button>
+            <button class="btn-secondary">Toissijainen</button>
+          </div>
+          <div class="btn-sizes">
+            <button class="btn-small">Pieni</button>
+            <button>Oletus</button>
+            <button class="btn-large">Suuri</button>
+          </div>
+          <div class="btn-state">
+            <button>Aktiivinen</button>
+            <button class="btn-inactive">Ei käytössä</button>
+          </div>
         </div>
       </section>
 
@@ -248,19 +254,23 @@
         <h2>Lomakkeet</h2>
         <div class="forms-inner">
           <form>
-            <label for="name">Nimi</label>
-            <input type="text" id="name" name="name" placeholder="Etunimi Sukunimi" />
-            <label for="email">Sähköpostiosoite</label>
-            <input type="email" id="email" name="email" placeholder="sinä@verkkotunnus.fi" />
-            <label for="selection">Valinta</label>
-            <select name="selection" id="selection">
-              <option>Valitse vaihtoehto</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-            <label for="message">Viesti</label>
-            <textarea name="message" id="message">Kirjoita viestisi tähän.</textarea>
+            <div class="details">
+              <label for="name">Nimi</label>
+              <input type="text" id="name" name="name" placeholder="Etunimi Sukunimi" />
+              <label for="email">Sähköpostiosoite</label>
+              <input type="email" id="email" name="email" placeholder="sinä@verkkotunnus.fi" />
+              <label for="selection">Valinta</label>
+              <select name="selection" id="selection">
+                <option>Valitse vaihtoehto</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="message">
+              <label for="message">Viesti</label>
+              <textarea name="message" id="message">Kirjoita viestisi tähän.</textarea>
+            </div>
           </form>
         </div>
       </section>
