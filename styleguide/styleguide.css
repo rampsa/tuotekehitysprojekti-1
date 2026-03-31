@@ -129,10 +129,24 @@ code {
 
 a,
 a:visited {
+  position: relative;
   color: rgb(var(--teal));
-  text-decoration: underline solid;
-  text-decoration-color: rgb(var(--graphite), 0.4);
-  text-decoration-thickness: 0.15rem;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.12rem;
+  bottom: -0.12rem;
+  left: 0;
+  background: rgb(var(--teal));
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* NOTE: Väripaletti */
