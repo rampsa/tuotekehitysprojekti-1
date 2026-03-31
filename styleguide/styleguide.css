@@ -8,7 +8,6 @@
   --fog: 238, 238, 238; /* Tausta */
 
   --base-font-size: 16px;
-  --base-scaled-down: calc(var(--base-font-size) * 0.8);
   --font-family: "DM Sans", sans-serif;
   --h1-font-size: 2.074rem;
   --h2-font-size: 1.728rem;
@@ -19,12 +18,9 @@
   --text-accent-font-size: 0.833rem;
   --small-font-size: 0.761rem;
 
-  --default-text-padding: 0.5rem;
-  --default-element-padding: 1rem;
+  --default-padding: 1rem;
 
-  --default-text-margin: 0.5rem 0;
-  --default-paragraph-margin: 0.5rem 0 0 0;
-  --default-element-margin: 1rem 0;
+  --default-margin: 1rem;
 
   --default-border-radius: 1rem;
 }
@@ -44,25 +40,16 @@ body {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--slate);
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: calc(var(--default-margin) * 2);
 }
 
 section:first-of-type {
-  margin-top: 2rem;
-}
-
-p {
-  margin: var(--default-paragraph-margin);
-  font-family: var(--font-family);
-  font-size: var(--base-font-size);
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--slate);
+  margin-top: calc(var(--default-margin) * 2);
 }
 
 h1,
@@ -71,44 +58,48 @@ h3,
 h4,
 h5,
 h6 {
-  margin: var(--default-text-margin);
+  margin: var(--default-margin) 0;
   font-family: var(--font-family);
   font-weight: 500;
+  line-height: 1.1;
   color: var(--slate);
 }
 
 h1 {
   font-size: var(--h1-font-size);
-  line-height: 1.2;
 }
 
 h2 {
   font-size: var(--h2-font-size);
-  line-height: 1.25;
 }
 
 h3 {
   font-size: var(--h3-font-size);
-  line-height: 1.3;
 }
 
 h4 {
   font-size: var(--h4-font-size);
-  line-height: 1.35;
 }
 
 h5 {
   font-size: var(--h5-font-size);
-  line-height: 1.4;
 }
 
 h6 {
   font-size: var(--h6-font-size);
-  line-height: 1.4;
+}
+
+p {
+  margin: var(--default-margin) 0;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--slate);
 }
 
 .text-accent {
-  margin: 0;
+  margin: calc(var(--default-margin) / 4) 0;
   font-size: var(--text-accent-font-size);
   line-height: 1.4;
   font-weight: 400;
@@ -118,19 +109,19 @@ h6 {
 }
 
 small {
-  margin: var(--default-text-margin);
+  margin: calc(var(--default-margin) / 2) 0;
   font-size: var(--small-font-size);
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 400;
   color: rgb(var(--graphite));
 }
 
 code {
-  margin: var(--default-paragraph-margin);
+  margin: var(--default-margin) 0;
   font-family: "JetBrains Mono", monospace;
   font-size: var(--base-font-size);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   background-color: rgba(var(--teal), 0.2);
   color: rgb(var(--teal));
 }
@@ -140,7 +131,7 @@ code {
 .graphite,
 .teal,
 .fog {
-  margin: var(--default-element-margin);
+  margin: var(--default-margin) 0;
 }
 
 .slate-upper,
@@ -171,7 +162,7 @@ code {
 }
 
 .color-lower {
-  padding: calc(var(--default-element-padding) / 2) var(--default-element-padding);
+  padding: var(--default-padding);
   background-color: #fff;
   border: 1px solid rgba(var(--slate), 0.1);
   border-top: none;
@@ -179,17 +170,96 @@ code {
   box-shadow: 0 2px 8px rgba(var(--slate), 0.07);
 }
 
+.color-lower p {
+  line-height: 0;
+}
+
 /* NOTE: Typografia */
-.typography-inner .font-family,
+.typography-inner h3 {
+  margin: 0;
+}
+
+.typography-inner .font-family {
+  margin-bottom: var(--default-margin);
+}
+
 .typography-inner .font {
-  margin: var(--default-element-margin);
+  padding: calc(var(--default-padding) / 2) 0;
 }
 
 .typography-inner hr {
-  border: 1px solid rgba(var(--fog), 1);
+  border: 1px solid rgba(var(--fog), 0.6);
 }
 
 /* NOTE: Välistys */
+.m-0 {
+  margin: 0;
+}
+
+.m-1 {
+  margin: 0.5rem;
+}
+
+.m-2 {
+  margin: 1rem;
+}
+
+.m-3 {
+  margin: 1.5rem;
+}
+
+.m-4 {
+  margin: 2rem;
+}
+
+.m-5 {
+  margin: 2.5rem;
+}
+
+.my-1 {
+  margin: 0.5rem 0;
+}
+
+.my-2 {
+  margin: 1rem 0;
+}
+
+.my-3 {
+  margin: 1.5rem 0;
+}
+
+.my-4 {
+  margin: 2rem 0;
+}
+
+.my-5 {
+  margin: 2.5rem 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.p-5 {
+  padding: 2.5rem;
+}
+
 .py-1 {
   padding: 0.5rem 0;
 }
@@ -206,16 +276,37 @@ code {
   padding: 2.5rem 0;
 }
 
-/* NOTE: Painikkeet */
-.buttons-inner {
-  margin: var(--default-element-margin);
+.padding-xy,
+.padding-y {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: var(--default-padding);
 }
 
+.padding-y {
+  flex-direction: row;
+}
+
+.padding-xy div,
+.padding-y div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(var(--teal), 0.2);
+}
+
+.padding-xy div small,
+.padding-y div small {
+  margin: 0;
+}
+
+/* NOTE: Painikkeet */
 button {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
-  padding: var(--default-text-padding) calc(var(--default-text-padding) * 2);
-  margin: var(--default-element-margin);
+  padding: calc(var(--default-padding) / 2) var(--default-padding);
+  margin: var(--default-margin) 0;
   background-color: rgb(var(--teal));
   color: rgb(var(--slate));
   border: 1px solid rgb(var(--teal));
@@ -229,11 +320,11 @@ button {
 }
 
 .btn-small {
-  padding: calc(var(--default-text-padding) / 4) calc(var(--default-text-padding) * 2);
+  padding: calc(var(--default-padding) / 8) var(--default-padding);
 }
 
 .btn-large {
-  padding: calc(var(--default-text-padding) * 2) calc(var(--default-text-padding) * 2);
+  padding: var(--default-padding) var(--default-padding);
 }
 
 .btn-inactive {
@@ -244,7 +335,8 @@ button {
 /* NOTE: Lomakkeet */
 form label {
   display: block;
-  font-size: var(--base-font-size);
+  font-size: 1rem;
+  color: rgb(var(--slate));
 }
 
 form input,
@@ -253,22 +345,23 @@ form textarea {
   font-size: var(--base-font-size);
   font-family: var(--font-family);
   width: 100%;
-  background-color: #ffffff;
+  background-color: rgba(var(--fog), 0.1);
   color: rgb(var(--graphite));
   border: 1px solid rgb(var(--graphite));
   border-radius: calc(var(--default-border-radius) / 4);
-  padding: var(--default-text-padding);
-  margin-bottom: 1rem;
+  padding: calc(var(--default-padding) / 2);
+  margin: 0 0 var(--default-margin);
 }
 
 form textarea {
+  max-width: 100%;
   min-height: 8rem;
 }
 
 /* NOTE: Kortit */
 .card {
-  margin: var(--default-element-margin);
-  padding: var(--default-element-padding);
+  margin: var(--default-margin) 0;
+  padding: var(--default-padding);
   background-color: #fff;
   border: 1px solid rgba(var(--slate), 0.1);
   border-radius: var(--default-border-radius);
@@ -276,11 +369,11 @@ form textarea {
 }
 
 .card p {
-  font-size: var(--base-scaled-down);
+  font-size: calc(var(--base-font-size) * 0.8);
 }
 
 .card hr {
-  margin: var(--default-element-margin);
+  margin: var(--default-margin) 0;
   border: 1px solid rgba(var(--fog), 0.5);
 }
 
@@ -293,7 +386,7 @@ form textarea {
 .card small {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  padding: var(--default-text-padding);
+  padding: calc(var(--default-padding) / 2);
   background-color: rgb(var(--fog));
   border-radius: var(--default-border-radius);
   border: 1px solid rgba(var(--slate), 0.1);
@@ -311,8 +404,8 @@ form textarea {
 
 /* NOTE: Ilmoitukset */
 .notification {
-  margin: var(--default-element-margin);
-  padding: var(--default-text-padding);
+  margin: var(--default-margin) 0;
+  padding: calc(var(--default-padding) / 2);
   border-radius: calc(var(--default-border-radius) / 4);
 }
 
@@ -342,7 +435,7 @@ form textarea {
 }
 
 .buttons-inner button {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 /* Break Pointit */
@@ -352,14 +445,14 @@ form textarea {
   .palette-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--default-element-padding);
+    gap: var(--default-padding);
+  }
 
-    .slate,
-    .graphite,
-    .teal,
-    .fog {
-      margin: 0;
-    }
+  .slate,
+  .graphite,
+  .teal,
+  .fog {
+    margin: 0;
   }
 
   /* NOTE: Typografia */
@@ -374,6 +467,10 @@ form textarea {
   }
 
   /* NOTE: Välistys */
+  .padding-xy,
+  .padding-y {
+    flex-direction: row;
+  }
 
   /* NOTE: Painikkeet */
 
@@ -399,14 +496,14 @@ form textarea {
   .palette-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--default-element-padding);
+    gap: var(--default-padding);
+  }
 
-    .slate,
-    .graphite,
-    .teal,
-    .fog {
-      margin: 0;
-    }
+  .slate,
+  .graphite,
+  .teal,
+  .fog {
+    margin: 0;
   }
 
   /* NOTE: Typografia */
@@ -425,7 +522,7 @@ form textarea {
   /* NOTE: Kortit */
   .cards-inner {
     display: flex;
-    gap: var(--default-element-padding);
+    gap: var(--default-padding);
   }
 
   /* NOTE: Ilmoitukset */
@@ -438,7 +535,7 @@ form textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: stretch;
-    gap: var(--default-element-padding);
+    gap: var(--default-padding);
   }
 
   .slate,
