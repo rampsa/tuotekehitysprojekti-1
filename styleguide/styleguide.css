@@ -175,7 +175,8 @@ code {
 }
 
 /* NOTE: Typografia */
-.typography-inner h3 {
+.font-family h3,
+.font-family p {
   margin: 0;
 }
 
@@ -183,12 +184,12 @@ code {
   margin-bottom: var(--default-margin);
 }
 
-.typography-inner .font {
-  padding: calc(var(--default-padding) / 2) 0;
-}
-
 .typography-inner hr {
   border: 1px solid rgba(var(--fog), 0.6);
+}
+
+.typography-inner .fonts hr {
+  grid-column: 1/-1;
 }
 
 /* NOTE: Välistys */
@@ -460,14 +461,11 @@ form textarea {
   }
 
   /* NOTE: Typografia */
-  .font {
-    display: flex;
+  .fonts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--default-margin);
     align-items: center;
-  }
-
-  .font .font-info {
-    width: 10rem;
-    flex-shrink: 0;
   }
 
   /* NOTE: Välistys */
