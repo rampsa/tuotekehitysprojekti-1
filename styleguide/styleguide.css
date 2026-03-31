@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css");
 
 :root {
   --slate: 34, 40, 49; /* Teksti, otsikot */
@@ -45,7 +46,7 @@ body {
 }
 
 section {
-  margin-bottom: calc(var(--default-margin) * 2);
+  margin-bottom: calc(var(--default-margin) * 4);
 }
 
 section:first-of-type {
@@ -126,12 +127,35 @@ code {
   color: rgb(var(--teal));
 }
 
+a,
+a:visited {
+  color: rgb(var(--teal));
+  text-decoration: underline solid;
+  text-decoration-color: rgb(var(--graphite), 0.4);
+  text-decoration-thickness: 0.15rem;
+}
+
 /* NOTE: Väripaletti */
-.slate,
-.graphite,
-.teal,
+.slate {
+  color: rgb(var(--slate));
+}
+
+.graphite {
+  color: rgb(var(--graphite));
+}
+
+.teal {
+  color: rgb(var(--teal));
+}
+
 .fog {
-  margin: var(--default-margin) 0;
+  color: rgb(var(--fog));
+}
+
+.palette-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-margin);
 }
 
 .slate-upper,
@@ -172,6 +196,16 @@ code {
 
 .color-lower p {
   line-height: 0;
+}
+
+/* NOTE: Kuvitus */
+.icons-inner {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--default-padding) 0;
+}
+.icons-inner i {
+  font-size: 3rem;
 }
 
 /* NOTE: Typografia */
