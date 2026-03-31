@@ -535,13 +535,6 @@ form textarea {
     gap: var(--default-padding);
   }
 
-  .slate,
-  .graphite,
-  .teal,
-  .fog {
-    margin: 0;
-  }
-
   /* NOTE: Typografia */
 
   /* NOTE: Välistys */
@@ -586,20 +579,6 @@ form textarea {
 /* Isommat desktopit */
 @media (min-width: 1025px) {
   /* NOTE: Väripaletti */
-  .palette-inner {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: stretch;
-    gap: var(--default-padding);
-  }
-
-  .slate,
-  .graphite,
-  .teal,
-  .fog {
-    display: flex;
-    flex-direction: column;
-  }
 
   /* NOTE: Typografia */
 
