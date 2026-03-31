@@ -130,6 +130,7 @@ code {
 a,
 a:visited {
   position: relative;
+  font-weight: 500;
   color: rgb(var(--teal));
   text-decoration: none;
 }
