@@ -53,6 +53,7 @@ section:first-of-type {
   margin-top: calc(var(--default-margin) * 2);
 }
 
+/*#region Tekstit ja linkit */
 h1,
 h2,
 h3,
@@ -149,8 +150,9 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+/*#endregion */
 
-/* NOTE: Väripaletti */
+/*#region Väripaletti */
 .slate {
   color: rgb(var(--slate));
 }
@@ -212,8 +214,9 @@ a:hover::after {
 .color-lower p {
   line-height: 0;
 }
+/*#endregion */
 
-/* NOTE: Kuvitus */
+/*#region Kuvitus */
 .icons-inner {
   display: flex;
   justify-content: space-around;
@@ -222,8 +225,9 @@ a:hover::after {
 .icons-inner i {
   font-size: 3rem;
 }
+/*#endregion */
 
-/* NOTE: Typografia */
+/*#region Typografia */
 .font-family h3,
 .font-family p {
   margin: 0;
@@ -240,8 +244,9 @@ a:hover::after {
 .typography-inner .fonts hr {
   grid-column: 1/-1;
 }
+/*#endregion */
 
-/* NOTE: Välistys */
+/*#region Välistys */
 .m-0 {
   margin: 0;
 }
@@ -313,15 +318,19 @@ a:hover::after {
 .py-1 {
   padding: 0.5rem 0;
 }
+
 .py-2 {
   padding: 1rem 0;
 }
+
 .py-3 {
   padding: 1.5rem 0;
 }
+
 .py-4 {
   padding: 2rem 0;
 }
+
 .py-5 {
   padding: 2.5rem 0;
 }
@@ -350,8 +359,9 @@ a:hover::after {
 .padding-y div small {
   margin: 0;
 }
+/*#endregion */
 
-/* NOTE: Painikkeet */
+/*#region Painikkeet */
 .buttons-inner {
   display: grid;
   gap: var(--default-margin);
@@ -394,8 +404,9 @@ button {
   opacity: 0.4;
   cursor: not-allowed;
 }
+/*#endregion */
 
-/* NOTE: Lomakkeet */
+/*#region Lomakkeet */
 form label {
   display: block;
   font-size: 1rem;
@@ -420,8 +431,9 @@ form textarea {
   resize: none;
   min-height: 8rem;
 }
+/*#endregion */
 
-/* NOTE: Kortit */
+/*#region Kortit */
 .card {
   margin: var(--default-margin) 0;
   padding: var(--default-padding);
@@ -464,8 +476,9 @@ form textarea {
 .card-accent hr {
   border: 1px solid rgba(var(--teal), 0.1);
 }
+/*#endregion */
 
-/* NOTE: Ilmoitukset */
+/*#region Ilmoitukset */
 .notification {
   margin: var(--default-margin) 0;
   padding: calc(var(--default-padding) / 2);
@@ -491,9 +504,9 @@ form textarea {
   background-color: rgba(192, 58, 43, 0.1);
   border-left: 5px solid rgb(192, 58, 43);
 }
+/*#endregion */
 
-/* Break Pointit */
-/* Pienet tabletit ja isommat mobiililaitteet (481px - 768px) */
+/*#region >480px */
 @media (min-width: 481px) {
   /* NOTE: Väripaletti */
   .palette-inner {
@@ -531,8 +544,9 @@ form textarea {
 
   /* NOTE: Ilmoitukset */
 }
+/*#endregion */
 
-/* Tabletit ja pienemmät desktopit */
+/*#region >768px */
 @media (min-width: 769px) {
   body {
     display: flex;
@@ -590,8 +604,9 @@ form textarea {
 
   /* NOTE: Ilmoitukset */
 }
+/*#endregion */
 
-/* Isommat desktopit */
+/*#region >1025px */
 @media (min-width: 1025px) {
   /* NOTE: Väripaletti */
 
@@ -607,3 +622,4 @@ form textarea {
 
   /* NOTE: Ilmoitukset */
 }
+/*#endregion */
