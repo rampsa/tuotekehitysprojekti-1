@@ -53,7 +53,7 @@ section:first-of-type {
   margin-top: calc(var(--default-margin) * 2);
 }
 
-/*#region Tekstit ja linkit */
+/* #region Tekstit ja linkit */
 h1,
 h2,
 h3,
@@ -150,9 +150,9 @@ a::after {
 a:hover::after {
   width: 100%;
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Väripaletti */
+/* #region Väripaletti */
 .slate {
   color: rgb(var(--slate));
 }
@@ -203,6 +203,8 @@ a:hover::after {
 }
 
 .color-lower {
+  display: flex;
+  flex-direction: column;
   padding: var(--default-padding);
   background-color: #fff;
   border: 1px solid rgba(var(--slate), 0.1);
@@ -212,11 +214,11 @@ a:hover::after {
 }
 
 .color-lower p {
-  line-height: 0;
+  margin: 0;
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Kuvitus */
+/* #region Kuvitus */
 .icons-inner {
   display: flex;
   justify-content: space-around;
@@ -225,9 +227,9 @@ a:hover::after {
 .icons-inner i {
   font-size: 3rem;
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Typografia */
+/* #region Typografia */
 .font-family h3,
 .font-family p {
   margin: 0;
@@ -244,9 +246,9 @@ a:hover::after {
 .typography-inner .fonts hr {
   grid-column: 1/-1;
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Välistys */
+/* #region Välistys */
 .m-0 {
   margin: 0;
 }
@@ -359,9 +361,9 @@ a:hover::after {
 .padding-y div small {
   margin: 0;
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Painikkeet */
+/* #region Painikkeet */
 .buttons-inner {
   display: grid;
   gap: var(--default-margin);
@@ -404,9 +406,9 @@ button {
   opacity: 0.4;
   cursor: not-allowed;
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Lomakkeet */
+/* #region Lomakkeet */
 form label {
   display: block;
   font-size: 1rem;
@@ -431,9 +433,9 @@ form textarea {
   resize: none;
   min-height: 8rem;
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Kortit */
+/* #region Kortit */
 .card {
   margin: var(--default-margin) 0;
   padding: var(--default-padding);
@@ -476,9 +478,9 @@ form textarea {
 .card-accent hr {
   border: 1px solid rgba(var(--teal), 0.1);
 }
-/*#endregion */
+/* #endregion */
 
-/*#region Ilmoitukset */
+/* #region Ilmoitukset */
 .notification {
   margin: var(--default-margin) 0;
   padding: calc(var(--default-padding) / 2);
@@ -504,10 +506,10 @@ form textarea {
   background-color: rgba(192, 58, 43, 0.1);
   border-left: 5px solid rgb(192, 58, 43);
 }
-/*#endregion */
+/* #endregion */
 
-/*#region >480px */
-@media (min-width: 481px) {
+/* #region Breakpoint 640px */
+@media (min-width: 641px) {
   /* NOTE: Väripaletti */
   .palette-inner {
     display: grid;
@@ -531,8 +533,7 @@ form textarea {
   }
 
   /* NOTE: Välistys */
-  .padding-xy,
-  .padding-y {
+  .padding-xy {
     flex-direction: row;
   }
 
@@ -544,9 +545,9 @@ form textarea {
 
   /* NOTE: Ilmoitukset */
 }
-/*#endregion */
+/* #endregion */
 
-/*#region >768px */
+/* #region Breakpoint 768px */
 @media (min-width: 769px) {
   body {
     display: flex;
@@ -604,11 +605,26 @@ form textarea {
 
   /* NOTE: Ilmoitukset */
 }
-/*#endregion */
+/* #endregion */
 
-/*#region >1025px */
+/* #region Breakpoint 1024px */
 @media (min-width: 1025px) {
   /* NOTE: Väripaletti */
+  .palette-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--default-padding);
+    align-items: stretch;
+  }
+
+  .color-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .color-lower {
+    height: 100%;
+  }
 
   /* NOTE: Typografia */
 
@@ -622,4 +638,4 @@ form textarea {
 
   /* NOTE: Ilmoitukset */
 }
-/*#endregion */
+/* #endregion */
