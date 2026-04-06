@@ -1,1 +1,141 @@
 @import url("defaults.css");
+/* Muuttujat cheatsheet
+  --slate: 34, 40, 49;
+  --graphite: 113, 117, 125;
+  --teal: 0, 173, 181;
+  --fog: 238, 238, 238;
+
+  --base-font-size: 16px;
+  --font-family: "DM Sans", sans-serif;
+  --h1-font-size: 2.074rem;
+  --h2-font-size: 1.728rem;
+  --h3-font-size: 1.44rem;
+  --h4-font-size: 1.2rem;
+  --h5-font-size: 1.096rem;
+  --h6-font-size: 1rem;
+  --text-accent-font-size: 0.833rem;
+  --small-font-size: 0.761rem;
+
+  --default-padding: 1rem;
+
+  --default-margin: 1rem;
+
+  --default-border-radius: 1rem;
+*/
+
+/* #region Header, Navigaatio */
+header .container {
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#toggle,
+#nav-cta {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: rgb(var(--slate));
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+  border-radius: calc(var(--default-border-radius) / 4);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--default-margin);
+  padding: var(--default-padding) 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  list-style-type: none;
+  background-color: rgb(var(--fog));
+  opacity: 0;
+}
+
+.nav-links a {
+  color: rgb(var(--slate));
+}
+
+#toggle:checked ~ .nav-links {
+  opacity: 1;
+}
+
+/* Animoi hampurilaisikoni X:ksi */
+#toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 4px);
+}
+
+#toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -4px);
+}
+/* #endregion */
+
+/* #region Hero */
+
+/* #endregion */
+
+/* #region Breakpoint 640px */
+@media (min-width: 641px) {
+}
+/* #endregion */
+
+/* #region Breakpoint 768px */
+@media (min-width: 769px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 768px;
+  }
+  /* #region Header, Navigaatio */
+  #nav-cta {
+    display: block;
+  }
+
+  .nav-links button,
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    opacity: 1;
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+  }
+
+  /* #endregion*/
+}
+/* #endregion */
+
+/* #region Breakpoint 1024px */
+@media (min-width: 1025px) {
+  .container {
+    width: 1024px;
+  }
+
+  .nav-links {
+    gap: calc(var(--default-margin) * 2);
+  }
+}
+/* #endregion */
