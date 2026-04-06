@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css");
+
+:root {
+  --slate: 34, 40, 49; /* Teksti, otsikot */
+  --graphite: 113, 117, 125; /* Toissijainen teksti */
+  --teal: 0, 173, 181; /* Tehosteväri */
+  --fog: 238, 238, 238; /* Tausta */
+
+  --base-font-size: 16px;
+  --font-family: "DM Sans", sans-serif;
+  --h1-font-size: 2.074rem;
+  --h2-font-size: 1.728rem;
+  --h3-font-size: 1.44rem;
+  --h4-font-size: 1.2rem;
+  --h5-font-size: 1.096rem;
+  --h6-font-size: 1rem;
+  --text-accent-font-size: 0.833rem;
+  --small-font-size: 0.761rem;
+
+  --default-padding: 1rem;
+
+  --default-margin: 1rem;
+
+  --default-border-radius: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  background-color: rgba(var(--fog), 0.1);
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--slate);
+}
+
+/* #region Tekstit, linkit */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: var(--default-margin) 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--slate);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+}
+
+p {
+  margin: var(--default-margin) 0;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--slate);
+}
+
+.text-accent {
+  margin: calc(var(--default-margin) / 4) 0;
+  font-size: var(--text-accent-font-size);
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: rgb(var(--teal));
+}
+
+small {
+  margin: calc(var(--default-margin) / 2) 0;
+  font-size: var(--small-font-size);
+  line-height: 1.4;
+  font-weight: 400;
+  color: rgb(var(--graphite));
+}
+
+code {
+  margin: var(--default-margin) 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: rgba(var(--teal), 0.2);
+  color: rgb(var(--teal));
+}
+
+a,
+a:visited {
+  position: relative;
+  font-weight: 500;
+  color: rgb(var(--teal));
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.12rem;
+  bottom: -0.12rem;
+  left: 0;
+  background: rgb(var(--teal));
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+/* #endregion */
+
+/* #region Padding, margin */
+.m-0 {
+  margin: 0;
+}
+
+.m-1 {
+  margin: 0.5rem;
+}
+
+.m-2 {
+  margin: 1rem;
+}
+
+.m-3 {
+  margin: 1.5rem;
+}
+
+.m-4 {
+  margin: 2rem;
+}
+
+.m-5 {
+  margin: 2.5rem;
+}
+
+.my-1 {
+  margin: 0.5rem 0;
+}
+
+.my-2 {
+  margin: 1rem 0;
+}
+
+.my-3 {
+  margin: 1.5rem 0;
+}
+
+.my-4 {
+  margin: 2rem 0;
+}
+
+.my-5 {
+  margin: 2.5rem 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.p-5 {
+  padding: 2.5rem;
+}
+
+.py-1 {
+  padding: 0.5rem 0;
+}
+
+.py-2 {
+  padding: 1rem 0;
+}
+
+.py-3 {
+  padding: 1.5rem 0;
+}
+
+.py-4 {
+  padding: 2rem 0;
+}
+
+.py-5 {
+  padding: 2.5rem 0;
+}
+/* #endregion */
+
+/* #region Napit */
+button {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  padding: calc(var(--default-padding) / 2) var(--default-padding);
+  background-color: rgb(var(--teal));
+  color: rgb(var(--slate));
+  border: 1px solid rgb(var(--teal));
+  border-radius: calc(var(--default-border-radius) / 4);
+}
+
+.btn-secondary {
+  color: rgb(var(--graphite));
+  background-color: #fff;
+  border: 1px solid rgb(var(--graphite));
+}
+
+.btn-small {
+  padding: calc(var(--default-padding) / 8) var(--default-padding);
+}
+
+.btn-large {
+  padding: var(--default-padding) var(--default-padding);
+}
+
+.btn-inactive {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+/* #endregion */
+
+/* #region Lomakkeet */
+form label {
+  display: block;
+  font-size: 1rem;
+  color: rgb(var(--slate));
+}
+
+form input,
+form select,
+form textarea {
+  font-size: var(--base-font-size);
+  font-family: var(--font-family);
+  width: 100%;
+  background-color: rgba(var(--fog), 0.1);
+  color: rgb(var(--graphite));
+  border: 1px solid rgb(var(--graphite));
+  border-radius: calc(var(--default-border-radius) / 4);
+  padding: calc(var(--default-padding) / 2);
+  margin: 0 0 var(--default-margin);
+}
+
+form textarea {
+  resize: none;
+  min-height: 8rem;
+}
+/* #endregion */
+
+/* #region Kortit */
+.card {
+  margin: var(--default-margin) 0;
+  padding: var(--default-padding);
+  background-color: #fff;
+  border: 1px solid rgba(var(--slate), 0.1);
+  border-radius: var(--default-border-radius);
+  box-shadow: 0 2px 8px rgba(var(--slate), 0.07);
+}
+
+.card p {
+  font-size: calc(var(--base-font-size) * 0.8);
+}
+
+.card hr {
+  margin: var(--default-margin) 0;
+  border: 1px solid rgba(var(--fog), 0.5);
+}
+
+.card-accent {
+  background-color: rgba(var(--teal), 0.2);
+  border: 1px solid rgba(var(--teal), 0.2);
+  box-shadow: 0 2px 8px rgba(var(--teal), 0.2);
+}
+
+.card small {
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  padding: calc(var(--default-padding) / 2);
+  background-color: rgb(var(--fog));
+  border-radius: var(--default-border-radius);
+  border: 1px solid rgba(var(--slate), 0.1);
+}
+
+.card-accent small {
+  background-color: rgb(var(--teal));
+  color: rgb(var(--slate));
+  border: 1px solid rgba(var(--slate), 0.3);
+}
+
+.card-accent hr {
+  border: 1px solid rgba(var(--teal), 0.1);
+}
+/* #endregion */
+
+/* #region Ilmoitukset */
+.notification-info,
+.notification-success,
+.notification-warning,
+.notification-error {
+  margin: var(--default-margin) 0;
+  padding: calc(var(--default-padding) / 8);
+  border-radius: calc(var(--default-border-radius) / 4);
+}
+
+.notification-info {
+  background-color: rgba(0, 174, 181, 0.1);
+  border-left: 5px solid rgb(0, 174, 181);
+}
+
+.notification-success {
+  background-color: rgba(40, 175, 96, 0.1);
+  border-left: 5px solid rgb(40, 175, 96);
+}
+
+.notification-warning {
+  background-color: rgba(230, 126, 35, 0.1);
+  border-left: 5px solid rgb(230, 126, 35);
+}
+
+.notification-error {
+  background-color: rgba(192, 58, 43, 0.1);
+  border-left: 5px solid rgb(192, 58, 43);
+}
+/* #endregion */
+
+/* #region Breakpoint 640px */
+@media (min-width: 641px) {
+}
+/* #endregion */
+
+/* #region Breakpoint 768px */
+@media (min-width: 769px) {
+  /* Lomakkeet */
+  form {
+    display: flex;
+    gap: var(--default-margin);
+    align-items: stretch;
+  }
+
+  form .details,
+  form .message {
+    flex: 1;
+  }
+
+  form .message {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form .message textarea {
+    flex: 1;
+  }
+}
+/* #endregion */
+
+/* #region Breakpoint 1024px */
+@media (min-width: 1025px) {
+}
+/* #endregion */
