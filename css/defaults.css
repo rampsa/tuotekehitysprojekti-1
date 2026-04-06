@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  background-color: rgba(var(--fog), 0.1);
+  background-color: #fff;
   font-family: var(--font-family);
   font-size: var(--base-font-size);
   font-weight: 400;
