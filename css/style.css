@@ -29,7 +29,12 @@ header .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  padding: var(--default-padding);
+}
+
+header .logo {
+  height: 2rem;
 }
 
 #toggle,
@@ -50,6 +55,10 @@ header .container {
   margin-bottom: 6px;
   transition: all 0.3s ease;
   border-radius: calc(var(--default-border-radius) / 4);
+}
+
+.hamburger span:last-child {
+  margin-bottom: 0;
 }
 
 .nav-links {
@@ -93,6 +102,18 @@ header .container {
 
 /* #endregion */
 
+/* #region Footer */
+footer {
+  background-color: rgb(var(--fog));
+  color: rgb(var(--slate));
+}
+
+footer .container {
+  padding: var(--default-padding);
+}
+
+/* #endregion */
+
 /* #region Breakpoint 640px */
 @media (min-width: 641px) {
 }
@@ -102,11 +123,10 @@ header .container {
 @media (min-width: 769px) {
   body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
-  .container {
-    width: 768px;
-  }
+
   /* #region Header, Navigaatio */
   #nav-cta {
     display: block;
@@ -120,6 +140,7 @@ header .container {
   .nav-links {
     opacity: 1;
     position: static;
+    padding: 0;
     background-color: transparent;
     flex-direction: row;
   }
@@ -138,17 +159,15 @@ header .container {
     left: 0;
     background: rgb(var(--teal));
   }
-
   /* #endregion*/
+  /* #region Footer */
+
+  /* #endregion */
 }
 /* #endregion */
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1025px) {
-  .container {
-    width: 1024px;
-  }
-
   .nav-links {
     gap: calc(var(--default-margin) * 2);
   }
