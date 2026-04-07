@@ -119,13 +119,12 @@ footer p {
   margin: 0;
 }
 
-footer h4 {
+footer h5 {
   margin-top: 0;
 }
 
 footer .logo img {
   height: 2rem;
-  filter: grayscale(450%);
 }
 
 footer .logo,
@@ -139,7 +138,7 @@ footer .opening-hours {
   grid-auto-rows: min-content;
 }
 
-footer .opening-hours h4 {
+footer .opening-hours h5 {
   grid-column: 1/-1;
 }
 
@@ -149,7 +148,7 @@ footer .socials {
   gap: calc(var(--default-margin) * 2);
 }
 
-footer .socials h4 {
+footer .socials h5 {
   display: none;
 }
 
@@ -228,7 +227,7 @@ footer .socials img {
     gap: 0;
   }
 
-  footer .socials h4 {
+  footer .socials h5 {
     display: block;
     grid-column: 1/-1;
   }
