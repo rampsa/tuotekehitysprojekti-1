@@ -74,6 +74,7 @@ header .logo {
   list-style-type: none;
   background-color: rgb(var(--fog));
   opacity: 0;
+  z-index: 100;
 }
 
 .nav-links a {
@@ -113,10 +114,6 @@ footer .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--default-margin);
-}
-
-footer p {
-  margin: 0;
 }
 
 footer ul {
@@ -244,9 +241,6 @@ footer .socials img {
 @media (min-width: 1025px) {
   .nav-links {
     gap: calc(var(--default-margin) * 2);
-  }
-  footer .container {
-    grid-template-columns: max-content 1fr 1fr 1fr;
   }
 }
 /* #endregion */
