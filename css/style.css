@@ -50,7 +50,8 @@ header .logo {
   height: 2rem;
 }
 
-#toggle {
+#toggle,
+#nav-cta {
   display: none;
 }
 
@@ -269,6 +270,10 @@ footer .socials img {
   }
 
   /* #region Header, Navigaatio */
+  #nav-cta {
+    display: block;
+  }
+
   .nav-links button,
   .hamburger {
     display: none;
