@@ -23,7 +23,7 @@
   --default-border-radius: 1rem;
 */
 
-/* Vain testaamistarkoituksissa, poistetaan lopuksi */
+/* Vain testaustarkoituksissa, poistetaan lopuksi */
 .red {
   background-color: red;
 }
@@ -50,8 +50,7 @@ header .logo {
   height: 2rem;
 }
 
-#toggle,
-#nav-cta {
+#toggle {
   display: none;
 }
 
@@ -87,6 +86,7 @@ header .logo {
   background-color: rgb(var(--fog));
   opacity: 0;
   z-index: 100;
+  transition: all 0.3s ease;
 }
 
 .nav-links li {
@@ -158,20 +158,43 @@ header .logo {
 /* #endregion */
 
 /* #region Hero */
+.hero {
+  background-image: linear-gradient(-45deg, rgba(var(--fog), 0.9) 0%, rgba(var(--fog), 0.1) 65%), url("/img/hero/hero.jpg");
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  padding: var(--default-padding);
+  display: flex;
+  justify-content: flex-end;
+}
 
+.hero-content {
+  padding: var(--default-padding) 0;
+}
+
+.hero-content h1 {
+  color: rgba(var(--slate));
+  max-width: 10ch;
+}
+
+.hero-content p {
+  max-width: 25ch;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--default-margin);
+}
 /* #endregion */
 
 /* #region Footer */
-footer {
-  background-color: rgb(var(--fog));
-  color: rgb(var(--slate));
-}
-
 footer .container {
   padding: var(--default-padding);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--default-margin);
+  background-color: rgb(var(--fog));
+  color: rgb(var(--slate));
 }
 
 footer ul {
@@ -220,6 +243,10 @@ footer .socials img {
 
 /* #region Breakpoint 640px */
 @media (min-width: 641px) {
+  /* #region Hero */
+
+  /* #endregion */
+
   /* #region Footer */
   footer .container {
     grid-template-columns: max-content 1fr 1fr;
@@ -242,10 +269,6 @@ footer .socials img {
   }
 
   /* #region Header, Navigaatio */
-  #nav-cta {
-    display: block;
-  }
-
   .nav-links button,
   .hamburger {
     display: none;
