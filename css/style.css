@@ -194,36 +194,29 @@ header .logo {
   flex-direction: row;
 }
 /* #endregion */
+
+/* #region grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-
 /* #endregion */
-
-/* #region grid */
 
 /* #region card */
 .card {
   display: flex;
   flex-direction: column;
+  height: 100%
 }
 
-.card-content {
-  display: flex;
-  flex-direction: column;
+.card p {
   flex-grow: 1;
 }
 
-.card-button {
-  width: 17rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--default-margin);
+.card button {
+  align-self: flex-start;
 }
-
 /* #endregion */
 
 /* #region Footer */
