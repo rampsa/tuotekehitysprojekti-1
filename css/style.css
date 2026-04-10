@@ -390,6 +390,11 @@ footer .socials img {
     justify-content: center;
   }
 
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
   /* #region Header, Navigaatio */
   .nav-links {
     gap: calc(var(--default-margin) * 2);
