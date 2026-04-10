@@ -195,6 +195,12 @@ header .logo {
 }
 /* #endregion */
 
+/* #region section */
+section {
+  margin-bottom: 2rem;
+}
+/* #endregion */
+
 /* #region grid */
 .grid {
   display: grid;
@@ -216,6 +222,19 @@ header .logo {
 
 .card button {
   align-self: flex-start;
+}
+/* #endregion */
+
+/* #region table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
 }
 /* #endregion */
 
