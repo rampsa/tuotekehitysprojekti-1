@@ -87,7 +87,6 @@ header .logo {
   background-color: rgb(var(--fog));
   opacity: 0;
   z-index: 100;
-  transition: all 0.3s ease;
 }
 
 .nav-links li {
@@ -159,12 +158,12 @@ header .logo {
 
 /* #region Hero */
 .hero {
-  background-image: linear-gradient(-45deg, rgba(var(--fog), 0) 0%, rgba(var(--fog), 0) 65%), url("/img/hero/hero.jpg");
+  background-image: linear-gradient(-90deg, rgba(var(--teal), 0.3) 0%, rgba(var(--fog), 0) 65%), url("/img/hero/hero.jpg");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
   padding: var(--default-padding);
-  min-height: 50vh;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -184,6 +183,10 @@ header .logo {
 .hero-content h1,
 .hero-content p {
   margin: 0;
+}
+
+.hero-content p {
+  color: rgb(var(--slate));
 }
 
 .hero-buttons {
