@@ -1,0 +1,52 @@
+/* Tyhjä pohja */
+
+/* Grid */
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+margin-bottom: var(--default-margin);
+padding-left: var(--default-padding);
+padding-right: var(--default-padding);
+}
+
+/* Card */
+.card {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
+.card p {
+flex-grow: 1;
+}
+
+.card button {
+align-self: flex-start;
+}
+
+/* Table */
+table {
+width: calc(100% - 2 * var(--default-margin));
+margin: var(--default-margin);
+border-collapse: collapse;
+table-layout: fixed;
+}
+
+th,
+td {
+padding: 12px;
+text-align: left;
+}
+
+/* Breakpoint 640px */
+@media (min-width: 640px) {
+}
+
+/* Breakpoint 768px */
+@media (min-width: 768px) {
+}
+
+/* #region Breakpoint 1024px */
+@media (min-width: 1024px) {
+}

@@ -27,6 +27,7 @@
 @import "header.css";
 @import "landing.css";
 @import "footer.css";
+@import "palvelut.css";
 
 /* Vain testaustarkoituksissa, poistetaan lopuksi */
 .red {
@@ -48,41 +49,6 @@ body {
 section,
 .container {
   background-color: #ffffff;
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-/* Card */
-.card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.card p {
-  flex-grow: 1;
-}
-
-.card button {
-  align-self: flex-start;
-}
-
-/* Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: left;
 }
 
 /* Breakpoint 640px */
