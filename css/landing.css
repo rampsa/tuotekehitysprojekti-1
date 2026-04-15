@@ -1,11 +1,40 @@
 /* Etusivu */
 
+.hero {
+  .hero-text {
+    padding: var(--default-padding);
+    text-align: center;
+
+    button {
+      margin: var(--default-margin) 0;
+    }
+  }
+}
+
 /* Breakpoint 640px */
 @media (min-width: 640px) {
 }
 
 /* Breakpoint 768px */
 @media (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--default-padding) 0;
+
+    .hero-text {
+      padding: var(--default-padding);
+      text-align: unset;
+
+      h1 {
+        margin: 0;
+      }
+    }
+
+    .hero-image img {
+      border-radius: var(--default-border-radius) 0 0 var(--default-border-radius);
+    }
+  }
 }
 
 /* #region Breakpoint 1024px */
