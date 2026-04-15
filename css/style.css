@@ -51,6 +51,10 @@ section,
   background-color: #ffffff;
 }
 
+main section h2 {
+        padding: var(--default-padding);
+    }
+
 /* Breakpoint 640px */
 @media (min-width: 640px) {
 }
