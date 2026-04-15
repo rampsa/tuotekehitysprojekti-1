@@ -25,6 +25,7 @@
 /* Importit. empty.css tyhjä pohjatiedosto */
 @import "defaults.css";
 @import "header.css";
+@import "landing.css";
 @import "footer.css";
 
 /* Vain testaustarkoituksissa, poistetaan lopuksi */
