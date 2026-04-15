@@ -1,4 +1,22 @@
-/* Tyhjä pohja */
+details {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: var(--default-padding);
+    margin-bottom: var(--default-margin);
+}
+
+details summary {
+    cursor: pointer;
+}
+
+details p {
+    font-style: italic;
+}
+
+.ukk {
+    padding: var(--default-padding)
+}
+
 
 /* Breakpoint 640px */
 @media (min-width: 640px) {
