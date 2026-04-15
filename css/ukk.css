@@ -14,7 +14,22 @@ details p {
 }
 
 .ukk {
-    padding: var(--default-padding)
+    margin: var(--default-margin)
+}
+
+.contact-form {
+    margin-left: var(--default-padding);
+    margin-bottom: var(--default-padding);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.contact-form button {
+    align-self: flex-start;
 }
 
 
