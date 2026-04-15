@@ -1,4 +1,3 @@
-@import url("defaults.css");
 /* Muuttujat cheatsheet
   --slate: 34, 40, 49;
   --graphite: 113, 117, 125;
@@ -23,6 +22,11 @@
   --default-border-radius: 1rem;
 */
 
+/* Importit. empty.css tyhjä pohjatiedosto */
+@import "defaults.css";
+@import "header.css";
+@import "footer.css";
+
 /* Vain testaustarkoituksissa, poistetaan lopuksi */
 .red {
   background-color: red;
@@ -45,196 +49,14 @@ section,
   background-color: #ffffff;
 }
 
-/* #region Header, Navigaatio */
-header .container {
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: var(--default-padding);
-}
-
-header .logo {
-  height: 2rem;
-}
-
-#toggle,
-#nav-cta {
-  display: none;
-}
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 30px;
-  height: 3px;
-  background: rgb(var(--slate));
-  margin-bottom: 6px;
-  transition: all 0.3s ease;
-  border-radius: calc(var(--default-border-radius) / 4);
-}
-
-.hamburger span:last-child {
-  margin-bottom: 0;
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: var(--default-margin);
-  padding-bottom: var(--default-padding);
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 4rem;
-  list-style-type: none;
-  background-color: rgb(var(--fog));
-  opacity: 0;
-  z-index: 100;
-}
-
-.nav-links li {
-  padding: 0 var(--default-padding);
-}
-
-.nav-links li:first-of-type {
-  padding: 0;
-}
-
-.nav-links a {
-  color: rgb(var(--slate));
-}
-
-.nav-links-quick {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-}
-
-.quick-contact,
-.quick-cta {
-  flex: 1;
-  border-bottom: 1px solid rgba(var(--graphite), 0.2);
-}
-
-.quick-contact div,
-.quick-cta div {
-  padding: calc(var(--default-padding) / 2) var(--default-padding);
-}
-
-.quick-contact {
-  border-right: 1px solid rgba(var(--graphite), 0.2);
-}
-
-.quick-contact p {
-  margin: 0;
-}
-
-.quick-cta {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.quick-cta button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--default-margin);
-}
-
-#toggle:checked ~ .nav-links {
-  opacity: 1;
-}
-
-#toggle:checked ~ .hamburger span:nth-child(1) {
-  transform: rotate(45deg) translate(9px, 4px);
-}
-
-#toggle:checked ~ .hamburger span:nth-child(2) {
-  opacity: 0;
-}
-
-#toggle:checked ~ .hamburger span:nth-child(3) {
-  transform: rotate(-45deg) translate(9px, -4px);
-}
-/* #endregion */
-
-/* #region Hero */
-.hero {
-  background-color: rgba(var(--teal), 0.4);
-  padding: var(--default-padding);
-  min-height: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.hero-content,
-.hero-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--default-margin);
-}
-
-.hero-content h1,
-.hero-content p {
-  margin: 0;
-}
-
-.hero-content p {
-  color: rgb(var(--slate));
-  max-width: 23ch;
-}
-
-.hero-buttons {
-  padding-top: var(--default-padding);
-  flex-direction: row;
-}
-/* #endregion */
-
-/* #region Introduction */
-.introduction {
-  display: flex;
-  flex-direction: column;
-  padding: var(--default-padding);
-  gap: var(--default-margin);
-
-  .introduction-image img {
-    border-radius: var(--default-border-radius);
-  }
-
-  .introduction-text .introduction-text-icons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: calc(var(--default-margin) / 2);
-    p {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      gap: var(--default-margin);
-    }
-  }
-}
-/* #endregion */
-
-/* #region grid */
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-/* #endregion */
 
-/* #region card */
+/* Card */
 .card {
   display: flex;
   flex-direction: column;
@@ -248,9 +70,8 @@ header .logo {
 .card button {
   align-self: flex-start;
 }
-/* #endregion */
 
-/* #region table */
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -262,167 +83,22 @@ td {
   padding: 12px;
   text-align: left;
 }
-/* #endregion */
 
-/* #region Footer */
-footer .container {
-  padding: var(--default-padding);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--default-margin);
-  background-color: rgb(var(--fog));
-  color: rgb(var(--slate));
+/* Breakpoint 640px */
+@media (min-width: 640px) {
 }
 
-footer ul {
-  list-style-type: none;
-}
-
-footer ul li:first-of-type,
-footer .socials b {
-  margin-bottom: calc(var(--default-margin) / 2);
-}
-
-footer .logo img {
-  height: 2rem;
-}
-
-footer .logo,
-footer .socials {
-  grid-column: 1 / -1;
-}
-
-footer .opening-hours {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: min-content;
-}
-
-footer .opening-hours li:first-of-type {
-  grid-column: 1/-1;
-}
-
-footer .socials {
-  display: flex;
-  justify-content: center;
-  gap: calc(var(--default-margin) * 2);
-}
-
-footer .socials b {
-  display: none;
-}
-
-footer .socials img {
-  width: 2rem;
-}
-
-/* #endregion */
-
-/* #region Breakpoint 640px */
-@media (min-width: 641px) {
-  /* #region Hero */
-
-  /* #endregion */
-
-  /* #region Footer */
-  footer .container {
-    grid-template-columns: max-content 1fr 1fr;
-    align-items: flex-start;
-  }
-
-  footer .logo {
-    grid-column: auto;
-  }
-  /* #endregion */
-}
-/* #endregion */
-
-/* #region Breakpoint 768px */
-@media (min-width: 769px) {
+/* Breakpoint 768px */
+@media (min-width: 768px) {
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
-  /* #region Header, Navigaatio */
-  #nav-cta {
-    display: block;
-  }
-
-  .nav-links button,
-  .hamburger {
-    display: none;
-  }
-
-  .nav-links {
-    opacity: 1;
-    position: static;
-    padding: 0;
-    background-color: transparent;
-    flex-direction: row;
-  }
-
-  .nav-links .active,
-  .nav-links .active:visited {
-    position: relative;
-  }
-
-  .nav-links .active::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.12rem;
-    bottom: -0.12rem;
-    left: 0;
-    background: rgb(var(--teal));
-  }
-
-  .nav-links li {
-    padding: 0;
-  }
-
-  .nav-links-quick {
-    display: none;
-  }
-  /* #endregion*/
-
-  /* #region Introduction */
-  .introduction {
-    flex-direction: row;
-    justify-content: baseline;
-
-    .introduction-image {
-      flex: 1 0 50%;
-    }
-  }
-  /* #endregion */
-
-  /* #region Footer */
-  footer .container {
-    grid-template-columns: max-content 1fr 1fr 1fr;
-    align-items: flex-start;
-  }
-
-  footer .socials {
-    grid-column: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-  }
-
-  footer .socials b {
-    display: block;
-    grid-column: 1/-1;
-  }
-  /* #endregion */
-  /* #region Hero */
-  /* #endregion */
 }
-/* #endregion */
 
-/* #region Breakpoint 1024px */
-@media (min-width: 1025px) {
+/* Breakpoint 1024px */
+@media (min-width: 1024px) {
   .container {
     width: 1024px;
   }
@@ -438,13 +114,4 @@ footer .socials img {
     flex-direction: column;
     align-items: center;
   }
-
-  /* #region Header, Navigaatio */
-  .nav-links {
-    gap: calc(var(--default-margin) * 2);
-  }
-  /* #endregion */
-  /* #region Hero */
-  /* #endregion */
 }
-/* #endregion */
