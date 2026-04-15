@@ -62,7 +62,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: var(--default-margin) 0;
+  margin: var(--default-margin);
   font-family: var(--font-family);
   font-weight: 500;
   line-height: 1.1;
@@ -310,10 +310,14 @@ form textarea {
   border: 1px solid rgba(var(--slate), 0.1);
   border-radius: var(--default-border-radius);
   box-shadow: 0 2px 8px rgba(var(--slate), 0.07);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card p {
   font-size: calc(var(--base-font-size) * 0.8);
+  flex-grow: 1;
 }
 
 .card hr {
@@ -344,6 +348,10 @@ form textarea {
 
 .card-accent hr {
   border: 1px solid rgba(var(--teal), 0.1);
+}
+
+.card button {
+  align-self: flex-start;
 }
 /* #endregion */
 
