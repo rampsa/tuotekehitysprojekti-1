@@ -29,6 +29,7 @@
 @import "footer.css";
 @import "palvelut.css";
 @import "ukk.css";
+@import "ajanvaraus.css";
 
 /* Vain testaustarkoituksissa, poistetaan lopuksi */
 .red {
