@@ -11,9 +11,17 @@
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
-  cursor: pointer;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 500%;
+    color: rgb(var(--teal));
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Table */
