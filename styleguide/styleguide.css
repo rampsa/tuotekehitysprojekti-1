@@ -1,4 +1,4 @@
-@import url(../css/defaults.css);
+@import url(defaults.css);
 
 section {
   margin-bottom: calc(var(--default-margin) * 3);
