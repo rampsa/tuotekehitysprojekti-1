@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixIt Mobile – Ajanvaraus</title>
+    <link rel="stylesheet" href="ajanvaraus.css">
+</head>
+<body>
+
+<div class="container">
+
+    <section class="booking">
+        <h2 class="slate">Ajanvaraus</h2>
+        <p>Varaa aika puhelimen, tietokoneen tai tabletin huoltoon.</p>
+
+        <form class="booking-form">
+            <div class="details">
+                <label for="name">Nimi</label>
+                <input id="name" type="text" placeholder="Etunimi Sukunimi" required>
+
+                <label for="email">Sähköposti</label>
+                <input id="email" type="email" placeholder="esimerkki@email.com" required>
+
+                <label for="phone">Puhelinnumero</label>
+                <input id="phone" type="tel" placeholder="040 123 4567" required>
+
+                <label for="device">Laite</label>
+                <select id="device" required>
+                    <option value="">– Valitse –</option>
+                    <option>Puhelin</option>
+                    <option>Tietokone</option>
+                    <option>Tabletti</option>
+                </select>
+
+                <label for="date">Päivämäärä</label>
+                <input id="date" type="date" required>
+
+                <label for="time">Kellonaika</label>
+                <input id="time" type="time" required>
+            </div>
+
+            <div class="message">
+                <label for="desc">Vian kuvaus</label>
+                <textarea id="desc" placeholder="Kuvaile laitteen ongelma..." required></textarea>
+
+                <button type="submit" class="btn-primary">Varaa aika</button>
+            </div>
+        </form>
+    </section>
+
+</div>
+
+</body>
+</html>
+
+
