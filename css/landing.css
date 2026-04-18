@@ -100,18 +100,29 @@
       > ul {
         margin-bottom: var(--default-margin);
       }
+
+      .text-accent {
+        margin: var(--default-margin) 0;
+      }
     }
 
     .how {
       list-style-position: inside;
+
       > li {
         font-weight: bolder;
       }
+
       ul {
         margin-bottom: var(--default-margin);
+
         li {
           list-style-type: none;
         }
+      }
+
+      .text-accent {
+        margin: var(--default-margin) 0;
       }
     }
   }
