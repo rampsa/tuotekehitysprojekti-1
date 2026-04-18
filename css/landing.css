@@ -15,14 +15,14 @@
     background-color: rgba(var(--fog), 0.8);
     border-radius: var(--default-border-radius);
     text-align: center;
-    transition: all 1s ease-out;
 
     h1 {
       margin: 0;
     }
 
     p {
-      max-width: 40ch;
+      text-align: justify;
+      max-width: 35ch;
     }
 
     .buttons {
