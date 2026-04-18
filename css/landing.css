@@ -12,7 +12,7 @@
 
   .hero-inner {
     padding: var(--default-padding);
-    background-color: rgba(var(--fog), 0.8);
+    background-color: rgba(var(--fog), 0.7);
     border-radius: var(--default-border-radius);
     text-align: center;
 
@@ -166,6 +166,13 @@
 
 /* Breakpoint 640px */
 @media (min-width: 640px) {
+  .hero {
+    justify-content: flex-end;
+
+    .hero-inner {
+      background-color: rgba(var(--fog), 0.3);
+    }
+  }
   .popular-services {
     .cards {
       display: flex;
@@ -184,10 +191,6 @@
 
 /* Breakpoint 768px */
 @media (min-width: 768px) {
-  .hero {
-    justify-content: flex-end;
-  }
-
   .landing-principles {
     .inner {
       display: flex;
