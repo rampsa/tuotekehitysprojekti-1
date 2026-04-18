@@ -21,6 +21,7 @@
     }
 
     p {
+      color: rgb(var(--slate));
       text-align: justify;
       max-width: 35ch;
     }
@@ -70,6 +71,52 @@
   }
 }
 
+.landing-principles {
+  padding: var(--default-padding);
+
+  .inner {
+    .why {
+      list-style-type: none;
+      margin-bottom: var(--default-margin);
+
+      li {
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--default-margin) / 2);
+      }
+
+      > li {
+        font-weight: bolder;
+      }
+
+      ul {
+        list-style-type: none;
+
+        li {
+          margin-left: calc(var(--default-margin) * 1.5);
+        }
+      }
+
+      > ul {
+        margin-bottom: var(--default-margin);
+      }
+    }
+
+    .how {
+      list-style-position: inside;
+      > li {
+        font-weight: bolder;
+      }
+      ul {
+        margin-bottom: var(--default-margin);
+        li {
+          list-style-type: none;
+        }
+      }
+    }
+  }
+}
+
 /* Breakpoint 640px */
 @media (min-width: 640px) {
   .popular-services {
@@ -92,6 +139,22 @@
 @media (min-width: 768px) {
   .hero {
     justify-content: flex-end;
+  }
+
+  .landing-principles {
+    .inner {
+      display: flex;
+      flex-direction: row;
+      gap: var(--default-margin);
+
+      .why,
+      .how {
+        flex: 1;
+      }
+
+      .why {
+      }
+    }
   }
 }
 
