@@ -15,6 +15,10 @@
   }
 }
 
+.landing-services {
+  padding: var(--default-padding);
+}
+
 /* Breakpoint 640px */
 @media (min-width: 640px) {
 }
