@@ -1,50 +1,103 @@
 /* Etusivu */
 
 .hero {
-  .hero-text {
-    padding: var(--default-padding);
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--default-padding);
+  background-image: url("../img/hero/hero.jpg");
+  background-size: cover;
+  background-position: center left;
+  min-height: 50vh;
 
-    button {
-      margin: var(--default-margin) 0;
+  .hero-inner {
+    padding: var(--default-padding);
+    background-color: rgba(var(--fog), 0.8);
+    border-radius: var(--default-border-radius);
+    text-align: center;
+    transition: all 1s ease-out;
+
+    h1 {
+      margin: 0;
     }
 
-    button:first-of-type {
-      margin-right: var(--default-margin);
+    p {
+      max-width: 40ch;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--default-margin);
     }
   }
 }
 
 .landing-services {
   padding: var(--default-padding);
+
+  .popular-services {
+    .cards {
+      .card {
+        padding: 0;
+      }
+
+      .card-upper {
+        height: 10rem;
+
+        img {
+          border-radius: var(--default-border-radius) var(--default-border-radius) 0 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .card-lower {
+        padding: var(--default-padding);
+
+        h4 {
+          margin: 0;
+        }
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          gap: calc(var(--default-margin) / 2);
+        }
+      }
+    }
+  }
 }
 
 /* Breakpoint 640px */
 @media (min-width: 640px) {
+  .popular-services {
+    .cards {
+      display: flex;
+      gap: var(--default-margin);
+
+      .card {
+        flex: 1;
+
+        .card-lower .text-accent {
+          max-width: 12ch;
+        }
+      }
+    }
+  }
 }
 
 /* Breakpoint 768px */
 @media (min-width: 768px) {
   .hero {
-    display: flex;
-    align-items: center;
-    padding: calc(var(--default-padding) * 2) 0;
-
-    .hero-text {
-      padding: 0 var(--default-padding);
-      text-align: unset;
-
-      h1 {
-        margin: 0;
-      }
-    }
-
-    .hero-image img {
-      border-radius: var(--default-border-radius) 0 0 var(--default-border-radius);
-    }
+    justify-content: flex-end;
   }
 }
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
+  .popular-services .cards .card .card-lower .text-accent {
+    max-width: none;
+  }
 }
