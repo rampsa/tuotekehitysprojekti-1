@@ -36,8 +36,18 @@
 
     th,
     td {
-      padding: 12px;
-      text-align: left;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: rgba(var(--teal), 0.3);
+    }
+    
+    tr:hover {
+        background-color: rgba(var(--teal), 0.1);
+        font-weight: bold;
+        cursor: pointer;
     }
   }
 }
