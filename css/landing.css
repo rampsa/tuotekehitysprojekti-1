@@ -128,6 +128,42 @@
   }
 }
 
+.landing-feedback {
+  padding: var(--default-padding);
+  .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--default-margin);
+
+    .card {
+      margin: 0;
+      small {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: var(--default-margin);
+
+        .picture {
+          img {
+            border-radius: 180px;
+          }
+        }
+
+        .details {
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Breakpoint 640px */
 @media (min-width: 640px) {
   .popular-services {
@@ -173,5 +209,12 @@
 @media (min-width: 1024px) {
   .popular-services .cards .card .card-lower .text-accent {
     max-width: none;
+  }
+
+  .landing-feedback {
+    .inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
