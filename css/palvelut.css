@@ -52,8 +52,18 @@
   }
 }
 
+.pricelist th:nth-child(2),
+.pricelist td:nth-child(2) {
+        display: none;
+    }
+
 /* Breakpoint 640px */
 @media (min-width: 640px) {
+    .pricelist th:nth-child(2),
+    .pricelist td:nth-child(2) {
+        display: table-cell;
+    }
+
 }
 
 /* Breakpoint 768px */
