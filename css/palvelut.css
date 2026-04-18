@@ -1,41 +1,45 @@
-/* Tyhjä pohja */
+.services {
+  padding: var(--default-padding);
 
-/* Grid */
-.grid {
+  /* Grid */
+  .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    margin-bottom: var(--default-margin);
-    padding-left: var(--default-padding);
-    padding-right: var(--default-padding);
+
+    .card {
+      .icon {
+        font-size: 500%;
+        color: rgb(var(--teal));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
+      cursor: pointer;
+    }
+  }
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
-    cursor: pointer;
-}
+.pricelist {
+  padding: var(--default-padding);
 
-.icon {
-    font-size: 500%;
-    color: rgb(var(--teal));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Table */
-table {
-    width: calc(100% - 2 * var(--default-margin));
-    margin: var(--default-margin);
+  /* Table */
+  table {
+    width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-}
 
-th,
-td {
-    padding: 12px;
-    text-align: left;
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+    }
+  }
 }
 
 /* Breakpoint 640px */
