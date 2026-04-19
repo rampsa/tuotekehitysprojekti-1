@@ -31,24 +31,10 @@
 @import "ukk.css";
 /* @import "ajanvaraus.css"; */
 
-/* Vain testaustarkoituksissa, poistetaan lopuksi */
-.red {
-  background-color: red;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.green {
-  background-color: green;
-}
-
 body {
-  background-color: rgba(var(--fog), 0.4);
+  background-color: rgba(var(--fog), 0.5);
 }
 
-section,
 .container {
   background-color: #ffffff;
 }

@@ -37,7 +37,6 @@ html {
 }
 
 body {
-  background-color: #fff;
   font-family: var(--font-family);
   font-size: var(--base-font-size);
   font-weight: 400;
@@ -247,7 +246,8 @@ a:hover::after {
 /* #region Napit */
 button {
   font-family: var(--font-family);
-  font-size: var(--base-font-size);
+  font-size: calc(var(--base-font-size) * 0.8);
+  text-transform: uppercase;
   padding: calc(var(--default-padding) / 2) var(--default-padding);
   background-color: rgb(var(--teal));
   color: rgb(var(--fog));
