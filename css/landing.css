@@ -2,34 +2,29 @@
 
 .hero {
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: var(--default-padding);
   background-image: url("../img/hero/hero.jpg");
   background-size: cover;
-  background-position: center left;
   min-height: 50vh;
 
   .hero-inner {
-    padding: var(--default-padding);
-    background-color: rgba(var(--fog), 0.7);
-    border-radius: var(--default-border-radius);
     text-align: center;
-
-    h1 {
-      margin: 0;
-    }
 
     p {
       color: rgb(var(--slate));
-      text-align: justify;
-      max-width: 35ch;
+      max-width: 34ch;
     }
 
     .buttons {
       display: flex;
       justify-content: center;
       gap: var(--default-margin);
+      margin: 2rem 0;
+
+      button {
+        border: none;
+      }
     }
   }
 }
@@ -173,12 +168,9 @@
 /* Breakpoint 640px */
 @media (min-width: 640px) {
   .hero {
-    justify-content: flex-end;
-
-    .hero-inner {
-      background-color: rgba(var(--fog), 0.3);
-    }
+    background-position: 50% 70%;
   }
+
   .popular-services {
     .cards {
       display: flex;
@@ -197,6 +189,10 @@
 
 /* Breakpoint 768px */
 @media (min-width: 768px) {
+  .hero {
+    background-position: 50% 70%;
+  }
+
   .landing-principles {
     .inner {
       display: flex;
@@ -216,6 +212,10 @@
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
+  .hero {
+    background-position: 90% 70%;
+  }
+
   .popular-services .cards .card .card-lower .text-accent {
     max-width: none;
   }
