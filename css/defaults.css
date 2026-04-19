@@ -377,7 +377,7 @@ form textarea {
 
 .card-accent small {
   background-color: rgb(var(--teal));
-  color: rgb(var(--slate));
+  color: rgb(var(--fog));
   border: 1px solid rgba(var(--slate), 0.3);
 }
 
