@@ -13,18 +13,16 @@
 
     p {
       color: rgb(var(--slate));
-      max-width: 34ch;
+      max-width: 40ch;
+      text-align: center;
     }
 
     .buttons {
       display: flex;
+      align-items: flex-start;
       justify-content: center;
       gap: var(--default-margin);
       margin: 2rem 0;
-
-      button {
-        border: none;
-      }
     }
   }
 }

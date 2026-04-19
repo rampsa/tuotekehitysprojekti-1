@@ -253,6 +253,13 @@ button {
   color: rgb(var(--slate));
   border: 1px solid rgb(var(--teal));
   border-radius: calc(var(--default-border-radius) / 4);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+button:active {
+  filter: brightness(1.1);
+  transform: scale(1.05);
 }
 
 .btn-secondary {
