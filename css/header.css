@@ -1,3 +1,9 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 #toggle,
 #nav-cta {
   display: none;
@@ -10,6 +16,7 @@ header .container {
   justify-content: space-between;
   align-items: flex-end;
   padding: var(--default-padding);
+  box-shadow: 0 4px 5px -4px rgba(var(--slate), 0.4);
 
   .logo {
     height: 2rem;
@@ -168,7 +175,4 @@ header .container {
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1025px) {
-  header .container nav .nav-links {
-    gap: calc(var(--default-margin) * 2);
-  }
 }

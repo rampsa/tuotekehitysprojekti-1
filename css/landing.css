@@ -139,10 +139,6 @@
         display: block;
       }
 
-      i {
-        color: rgb(var(--teal));
-      }
-
       .user {
         display: flex;
         align-items: flex-start;
@@ -157,6 +153,11 @@
         .details {
           h4 {
             margin: 0;
+          }
+
+          i {
+            color: rgb(var(--teal));
+            font-size: 0.8rem;
           }
         }
       }
@@ -201,9 +202,6 @@
       .why,
       .how {
         flex: 1;
-      }
-
-      .why {
       }
     }
   }

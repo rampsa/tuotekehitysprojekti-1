@@ -1,3 +1,7 @@
+footer {
+  background-color: rgb(var(--fog));
+}
+
 footer .container {
   padding: var(--default-padding);
   display: grid;

@@ -45,7 +45,7 @@
 }
 
 body {
-  background-color: rgba(var(--fog), 0.6);
+  background-color: rgba(var(--fog), 0.4);
 }
 
 section,
