@@ -250,22 +250,29 @@ button {
   font-size: var(--base-font-size);
   padding: calc(var(--default-padding) / 2) var(--default-padding);
   background-color: rgb(var(--teal));
-  color: rgb(var(--slate));
-  border: 1px solid rgb(var(--teal));
+  color: rgb(var(--fog));
+  border: 1px solid rgb(1, 141, 148);
   border-radius: calc(var(--default-border-radius) / 4);
-  transition: all 0.2s ease-in-out;
+  position: relative;
+  transition: all 0.2s ease-out;
 }
 
 button:hover,
-button:active {
-  filter: brightness(1.1);
-  transform: scale(1.05);
+button::selection {
+  background-color: rgb(1, 141, 148);
+  color: #fff;
 }
 
 .btn-secondary {
   color: rgb(var(--graphite));
+  background-color: rgba(var(--fog));
+  border: 1px solid rgba(var(--graphite), 0.4);
+}
+
+.btn-secondary:hover,
+.btn-secondary::selection {
   background-color: #fff;
-  border: 1px solid rgb(var(--graphite));
+  color: rgba(var(--slate));
 }
 
 .btn-small {
