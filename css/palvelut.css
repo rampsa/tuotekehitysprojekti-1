@@ -1,8 +1,7 @@
 .services {
   padding: var(--default-padding);
 
-  /* Grid */
-  .grid {
+  .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -66,9 +65,11 @@
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
-    .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
-        cursor: pointer;
+    .services {
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
+            cursor: pointer;
+        }
     }
 }
