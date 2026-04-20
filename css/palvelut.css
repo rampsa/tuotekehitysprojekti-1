@@ -16,12 +16,6 @@
         align-items: center;
       }
     }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
-      cursor: pointer;
-    }
   }
 }
 
@@ -72,4 +66,9 @@
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
+        cursor: pointer;
+    }
 }
