@@ -2,8 +2,7 @@
   padding: var(--default-padding);
 
   .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: column;
     gap: 20px;
     align-items: strech;
     
@@ -83,14 +82,18 @@
 
 /* Breakpoint 768px */
 @media (min-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
   .contact-form {
-        .content {
-            flex-direction: row;
-            gap: var(--default-margin);
-        }
+    .content {
+      flex-direction: row;
+      gap: var(--default-margin);
     }
+  }
 }
