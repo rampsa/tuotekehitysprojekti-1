@@ -1,36 +1,53 @@
-.ukk {
+.faq {
   padding: var(--default-padding);
-}
 
-details {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: var(--default-padding);
-    margin-bottom: var(--default-margin);
-}
+    details {
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: var(--default-padding);
+        margin-bottom: var(--default-margin);
+    }
 
-details summary {
-    cursor: pointer;
-}
+    details summary {
+        cursor: pointer;
+    }
 
-details p {
-    font-style: italic;
+    details p {
+        font-style: italic;
+    }
 }
 
 .contact-form {
     margin-left: var(--default-padding);
     margin-bottom: var(--default-padding);
+
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    textarea {
+        flex: 1;
+    }
+
+    button {
+        align-self: flex-start;
+    }
+
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-}
-
-.contact-form button {
-    align-self: flex-start;
-}
 
 
 /* Breakpoint 640px */
@@ -43,4 +60,10 @@ details p {
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
+    .contact-form {
+        .content {
+            flex-direction: row;
+            gap: var(--default-margin);
+        }
+    }
 }

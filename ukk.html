@@ -44,7 +44,7 @@
     </header>
     <main>
       <div class="container">
-        <section class="ukk">
+        <section class="faq">
           <h2>Usein kysytyt kysymykset</h2>
           <p>Mietityttääkö jokin asia? Ei hätää, tältä sivulta löydät vastauksia usein kysyttyihin kysymyksiin!</p>
           <details>
@@ -80,10 +80,14 @@
           <h2>Ota yhteyttä!</h2>
           <p>Etkö löytänyt vastausta kysymykseesi? Ota meihin yhteyttä alla olevan yhteydenottolomakkeen kautta.</p>
           <form>
-            <input type="text" id="nimi" name="nimi" placeholder="Nimi">
-            <input type="email" id="sposti" name="sposti" placeholder="Sähköposti">
-            <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero">
-            <textarea id="viesti" name="viesti" placeholder="Kirjoita viestisi tähän..."></textarea>
+            <div class="content">
+              <div class="input">
+                <input type="text" id="nimi" name="nimi" placeholder="Nimi">
+                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti">
+                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero">
+              </div>
+              <textarea id="viesti" name="viesti" placeholder="Kirjoita viestisi tähän..."></textarea>
+            </div>
             <button type="submit">Lähetä viesti</button>
           </form>
         </section>
