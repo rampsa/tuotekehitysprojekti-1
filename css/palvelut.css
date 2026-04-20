@@ -44,7 +44,7 @@
         background-color: rgba(var(--teal), 0.3);
     }
     
-    tr:hover {
+    tbody tr:hover {
         background-color: rgba(var(--teal), 0.1);
         font-weight: bold;
         cursor: pointer;
