@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixIT Mobile – Mobiililaitehuolto</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="img/logo/logo_white.png" alt="FixIT Mobile logo" class="logo" />
+        <nav>
+          <input type="checkbox" id="toggle" />
+          <label for="toggle" class="hamburger" aria-label="Valikko">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <ul class="nav-links">
+            <li class="nav-links-quick">
+              <div class="quick-contact">
+                <div>
+                  <p class="text-accent">Asiakaspalvelu</p>
+                  +358 00 1234567
+                </div>
+              </div>
+              <div class="quick-cta">
+                <div>
+                  <button>Varaa huolto<i class="iconoir-arrow-right"></i></button>
+                </div>
+              </div>
+            </li>
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="palvelut.html">Palvelut</a></li>
+            <li><a href="tietoa.html">Tietoa meistä</a></li>
+            <li><a href="ukk.html">UKK</a></li>
+            <li><a href="yhteystiedot.html" class="active">Yhteystiedot</a></li>
+          </ul>
+        </nav>
+        <button id="nav-cta">Varaa huolto</button>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="contacts">
+          <h2>Yhteystiedot</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Yhteystiedot</h3>
+              <ul class="card-content">
+                <li>Kuntokatu 3</li>
+                <li>+358 00 1234567</li>
+                <li>33520 Tampere</li>
+                <li><a href="mailto:asiakaspalvelu@fixit.fi">asiakaspalvelu@fixit.fi</a></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Aukioloajat</h3>
+              <ul class="card-content">
+                <li>Ma-Pe</li>
+                <li>10-18</li>
+                <li>La</li>
+                <li>10-14</li>
+                <li>Sunnuntai</li>
+                <li>Suljettu</li>
+              </ul>
+            </div>
+            <div class="map-card">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1600.6817613447456!2d23.809714274627733!3d61.503833853027366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfi!2sfi!4v1776695895169!5m2!1sfi!2sfi" 
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </section>
+        <section class="contact-form">
+          <h2>Ota yhteyttä!</h2>
+          <p>Ota meihin yhteyttä alla olevan yhteydenottolomakkeen kautta.</p>
+          <form>
+            <div class="content">
+              <div class="input">
+                <input type="text" id="nimi" name="nimi" placeholder="Nimi">
+                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti">
+                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero">
+              </div>
+              <textarea id="viesti" name="viesti" placeholder="Kirjoita viestisi tähän..."></textarea>
+            </div>
+            <button type="submit">Lähetä viesti</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo/logo_fog.png" alt="FixIT logo" />
+        </div>
+        <ul class="contact">
+          <li><b>Yhteystiedot</b></li>
+          <li>Mobiilikatu 1</li>
+          <li>00000 Kaupunki</li>
+          <li>+358 00 1234567</li>
+          <li><a href="mailto:asiakaspalvelu@fixit.fi">asiakaspalvelu@fixit.fi</a></li>
+        </ul>
+        <ul class="opening-hours">
+          <li><b>Aukioloajat</b></li>
+          <li>Ma-Pe</li>
+          <li>10-18</li>
+          <li>La</li>
+          <li>10-14</li>
+          <li>Sunnuntai</li>
+          <li>Suljettu</li>
+        </ul>
+        <div class="socials">
+          <b>FixIT somessa</b>
+          <a href="#"><img src="img/some-icons/icons8-facebook.svg" alt="FixIT Facebook" /></a>
+          <a href="#"><img src="img/some-icons/icons8-instagram.svg" alt="FixIT Instagram" /></a>
+          <a href="#"> <img src="img/some-icons/icons8-tiktok.svg" alt="FixIT TikTok" /></a>
+          <a href="#"><img src="img/some-icons/icons8-x.svg" alt="FixIT X" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
