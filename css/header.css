@@ -17,7 +17,9 @@ header .container {
   justify-content: space-between;
   align-items: flex-end;
   padding: var(--default-padding);
-  box-shadow: 0 4px 5px -4px rgba(var(--slate), 0.4);
+  box-shadow:
+    0 4px 5px -4px rgba(var(--slate), 0.4),
+    0 4px 15px rgba(var(--slate), 0.1);
 
   .logo {
     height: 2rem;
