@@ -33,11 +33,14 @@
 /* @import "ajanvaraus.css"; */
 
 body {
-  background-color: rgba(var(--fog), 0.5);
+  background-color: rgb(255, 255, 255);
+  background-image: repeating-linear-gradient(45deg, rgba(var(--fog), 0.1) 0, rgba(var(--fog), 0.8) 1px, transparent 0, transparent 50%);
+  background-size: 10px 10px;
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 15px rgba(var(--slate), 0.1);
 }
 
 /* Breakpoint 640px */
