@@ -80,6 +80,10 @@
       background-color: rgba(var(--teal), 0.3);
     }
 
+    tbody tr {
+      transition: all 0.1s ease-in-out;
+    }
+
     tbody tr:hover {
       background-color: rgba(var(--teal), 0.1);
       font-weight: bold;
