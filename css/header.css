@@ -21,6 +21,11 @@ header .container {
 
   .logo {
     height: 2rem;
+    pointer-events: none;
+  }
+
+  > a::after {
+    content: none;
   }
 
   nav {
