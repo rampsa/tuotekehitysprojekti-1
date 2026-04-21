@@ -30,7 +30,7 @@
 @import "palvelut.css";
 @import "ukk.css";
 /* @import "yhteystiedot.css"; */
-/* @import "ajanvaraus.css"; */
+@import "ajanvaraus.css";
 
 body {
   background-color: rgb(255, 255, 255);

@@ -46,42 +46,42 @@
     <main>
       <div class="container">
         <section class="booking">
-          <h2 class="slate">Ajanvaraus</h2>
-          <p>Varaa aika puhelimen, tietokoneen tai tabletin huoltoon.</p>
+          <h2>Ajanvaraus</h2>
+          <p class="text-accent">Varaa aika puhelimen, tietokoneen tai tabletin huoltoon.</p>
 
-          <form class="booking-form">
+          <form>
             <div class="details">
               <label for="name">Nimi</label>
-              <input id="name" type="text" placeholder="Etunimi Sukunimi" required />
+              <input type="text" id="name" name="name" placeholder="Etunimi Sukunimi" />
 
-              <label for="email">Sähköposti</label>
-              <input id="email" type="email" placeholder="esimerkki@email.com" required />
+              <label for="email">Sähköpostiosoite</label>
+              <input type="email" id="email" name="email" placeholder="sinä@verkkotunnus.fi" />
 
               <label for="phone">Puhelinnumero</label>
-              <input id="phone" type="tel" placeholder="040 123 4567" required />
+              <input id="phone" type="tel" placeholder="040 123 4567" />
 
               <label for="device">Laite</label>
-              <select id="device" required>
-                <option value="">– Valitse –</option>
+              <select id="device">
+                <option>Valitse</option>
                 <option>Puhelin</option>
                 <option>Tietokone</option>
                 <option>Tabletti</option>
+                <option>Muu</option>
+                </select>
+
+                <label for="date">Päivämäärä</label>
+                <input id="date" type="date" />
+
+                <label for="time">Kellonaika</label>
+                <input id="time" type="time" />
               </select>
-
-              <label for="date">Päivämäärä</label>
-              <input id="date" type="date" required />
-
-              <label for="time">Kellonaika</label>
-              <input id="time" type="time" required />
             </div>
-
             <div class="message">
               <label for="desc">Vian kuvaus</label>
-              <textarea id="desc" placeholder="Kuvaile laitteen ongelma..." required></textarea>
-
-              <button type="submit" class="btn-primary">Varaa aika</button>
+              <textarea name="desc" id="desc">Kuvaile laitteen ongelmia..</textarea>
             </div>
           </form>
+          <button>Lähetä viesti</button>
         </section>
       </div>
     </main>
