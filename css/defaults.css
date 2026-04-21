@@ -297,7 +297,7 @@ button:hover::before {
 }
 
 .btn-small {
-  padding: calc(var(--default-padding) / 8) var(--default-padding);
+  padding: calc(var(--default-padding) / 8) calc(var(--default-padding) / 2);
 }
 
 .btn-large {

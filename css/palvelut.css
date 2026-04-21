@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--default-margin);
+    margin-bottom: var(--default-margin);
     counter-reset: step-counter;
     ul {
       list-style-type: none;
@@ -23,8 +24,13 @@
   .service-cards {
     .inner {
       .card {
+        margin: 0;
         display: flex;
         flex-direction: column;
+
+        p {
+          margin: var(--default-margin) 0 0;
+        }
 
         .card-header {
           display: flex;
