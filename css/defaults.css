@@ -421,6 +421,13 @@ form textarea {
 }
 /* #endregion */
 
+/* #region Luokat */
+.no-link-hover::after {
+  content: none;
+}
+
+/* #endregion*/
+
 /* #region Breakpoint 640px */
 @media (min-width: 641px) {
 }
