@@ -133,11 +133,5 @@
       grid-template-columns: 1fr 1fr 1fr;
       gap: var(--default-margin);
     }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(var(--slate), 0.15);
-      cursor: pointer;
-    }
   }
 }

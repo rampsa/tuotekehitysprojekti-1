@@ -348,6 +348,11 @@ form textarea {
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(var(--slate), 0.2);
 }
 
 .card p {
