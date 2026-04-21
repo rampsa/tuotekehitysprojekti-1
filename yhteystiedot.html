@@ -9,7 +9,7 @@
   <body>
     <header>
       <div class="container">
-        <img src="img/logo/logo_white.png" alt="FixIT Mobile logo" class="logo" />
+        <a href="index.html"><img src="img/logo/logo_white.png" alt="FixIT Mobile logo" class="logo" /></a>
         <nav>
           <input type="checkbox" id="toggle" />
           <label for="toggle" class="hamburger" aria-label="Valikko">
@@ -28,17 +28,19 @@
               </div>
               <div class="quick-cta">
                 <div>
-                  <button>Varaa huolto<i class="iconoir-arrow-right"></i></button>
+                  <a href="ajanvaraus.html"
+                    ><button>Varaa huolto<i class="iconoir-arrow-right"></i></button
+                  ></a>
                 </div>
               </div>
             </li>
             <li><a href="index.html">Etusivu</a></li>
             <li><a href="palvelut.html">Palvelut</a></li>
-            <li><a href="ukk.html">UKK</a></li>
+            <li><a href="ukk.html">Info</a></li>
             <li><a href="yhteystiedot.html" class="active">Yhteystiedot</a></li>
           </ul>
         </nav>
-        <button id="nav-cta">Varaa huolto</button>
+        <a href="ajanvaraus.html" id="nav-cta" class="no-link-hover"><button>Varaa huolto</button></a>
       </div>
     </header>
     <main>
@@ -67,13 +69,7 @@
               </ul>
             </div>
             <div class="map-card">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1600.6817613447456!2d23.809714274627733!3d61.503833853027366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfi!2sfi!4v1776695895169!5m2!1sfi!2sfi" 
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1600.6817613447456!2d23.809714274627733!3d61.503833853027366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfi!2sfi!4v1776695895169!5m2!1sfi!2sfi" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
             </div>
           </div>
         </section>
@@ -83,9 +79,9 @@
           <form>
             <div class="content">
               <div class="input">
-                <input type="text" id="nimi" name="nimi" placeholder="Nimi">
-                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti">
-                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero">
+                <input type="text" id="nimi" name="nimi" placeholder="Nimi" />
+                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti" />
+                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero" />
               </div>
               <textarea id="viesti" name="viesti" placeholder="Kirjoita viestisi tähän..."></textarea>
             </div>

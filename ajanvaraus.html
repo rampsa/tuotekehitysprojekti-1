@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FixIt Mobile – Ajanvaraus</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <img src="img/logo/logo_white.png" alt="FixIT Mobile logo" class="logo" />
+        <a href="index.html"><img src="img/logo/logo_white.png" alt="FixIT Mobile logo" class="logo" /></a>
         <nav>
           <input type="checkbox" id="toggle" />
           <label for="toggle" class="hamburger" aria-label="Valikko">
@@ -28,93 +28,92 @@
               </div>
               <div class="quick-cta">
                 <div>
-                  <button>Varaa huolto<i class="iconoir-arrow-right"></i></button>
+                  <a href="ajanvaraus.html"
+                    ><button>Varaa huolto<i class="iconoir-arrow-right"></i></button
+                  ></a>
                 </div>
               </div>
             </li>
             <li><a href="index.html">Etusivu</a></li>
             <li><a href="palvelut.html">Palvelut</a></li>
-            <li><a href="ukk.html">UKK</a></li>
+            <li><a href="ukk.html">Info</a></li>
             <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
           </ul>
         </nav>
-        <button id="nav-cta">Varaa huolto</button>
+        <a href="ajanvaraus.html" id="nav-cta" class="no-link-hover"><button>Varaa huolto</button></a>
       </div>
     </header>
     <main>
-        <div class="container">
-            <section class="booking">
-                <h2 class="slate">Ajanvaraus</h2>
-                <p>Varaa aika puhelimen, tietokoneen tai tabletin huoltoon.</p>
+      <div class="container">
+        <section class="booking">
+          <h2 class="slate">Ajanvaraus</h2>
+          <p>Varaa aika puhelimen, tietokoneen tai tabletin huoltoon.</p>
 
-                <form class="booking-form">
-                    <div class="details">
-                        <label for="name">Nimi</label>
-                        <input id="name" type="text" placeholder="Etunimi Sukunimi" required>
+          <form class="booking-form">
+            <div class="details">
+              <label for="name">Nimi</label>
+              <input id="name" type="text" placeholder="Etunimi Sukunimi" required />
 
-                        <label for="email">Sähköposti</label>
-                        <input id="email" type="email" placeholder="esimerkki@email.com" required>
+              <label for="email">Sähköposti</label>
+              <input id="email" type="email" placeholder="esimerkki@email.com" required />
 
-                        <label for="phone">Puhelinnumero</label>
-                        <input id="phone" type="tel" placeholder="040 123 4567" required>
+              <label for="phone">Puhelinnumero</label>
+              <input id="phone" type="tel" placeholder="040 123 4567" required />
 
-                        <label for="device">Laite</label>
-                        <select id="device" required>
-                            <option value="">– Valitse –</option>
-                            <option>Puhelin</option>
-                            <option>Tietokone</option>
-                            <option>Tabletti</option>
-                        </select>
+              <label for="device">Laite</label>
+              <select id="device" required>
+                <option value="">– Valitse –</option>
+                <option>Puhelin</option>
+                <option>Tietokone</option>
+                <option>Tabletti</option>
+              </select>
 
-                        <label for="date">Päivämäärä</label>
-                        <input id="date" type="date" required>
+              <label for="date">Päivämäärä</label>
+              <input id="date" type="date" required />
 
-                        <label for="time">Kellonaika</label>
-                        <input id="time" type="time" required>
-                    </div>
-
-                    <div class="message">
-                        <label for="desc">Vian kuvaus</label>
-                        <textarea id="desc" placeholder="Kuvaile laitteen ongelma..." required></textarea>
-
-                        <button type="submit" class="btn-primary">Varaa aika</button>
-                    </div>
-                </form>
-            </section>
-
-        </div>
-        </main>
-        <footer>
-        <div class="container">
-            <div class="logo">
-            <img src="img/logo/logo_fog.png" alt="FixIT logo" />
+              <label for="time">Kellonaika</label>
+              <input id="time" type="time" required />
             </div>
-            <ul class="contact">
-            <li><b>Yhteystiedot</b></li>
-            <li>Kuntokatu 3</li>
-            <li>33520 Tampere</li>
-            <li>+358 00 1234567</li>
-            <li><a href="mailto:asiakaspalvelu@fixit.fi">asiakaspalvelu@fixit.fi</a></li>
-            </ul>
-            <ul class="opening-hours">
-            <li><b>Aukioloajat</b></li>
-            <li>Ma-Pe</li>
-            <li>10-18</li>
-            <li>La</li>
-            <li>10-14</li>
-            <li>Sunnuntai</li>
-            <li>Suljettu</li>
-            </ul>
-            <div class="socials">
-            <b>Sosiaalinen media</b>
-            <img src="img/some-icons/icons8-facebook.svg" alt="FixIT Facebook" />
-            <img src="img/some-icons/icons8-instagram.svg" alt="FixIT Instagram" />
-            <img src="img/some-icons/icons8-tiktok.svg" alt="FixIT TikTok" />
-            <img src="img/some-icons/icons8-x.svg" alt="FixIT X" />
+
+            <div class="message">
+              <label for="desc">Vian kuvaus</label>
+              <textarea id="desc" placeholder="Kuvaile laitteen ongelma..." required></textarea>
+
+              <button type="submit" class="btn-primary">Varaa aika</button>
             </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo/logo_fog.png" alt="FixIT logo" />
         </div>
-        </footer>
+        <ul class="contact">
+          <li><b>Yhteystiedot</b></li>
+          <li>Kuntokatu 3</li>
+          <li>33520 Tampere</li>
+          <li>+358 00 1234567</li>
+          <li><a href="mailto:asiakaspalvelu@fixit.fi">asiakaspalvelu@fixit.fi</a></li>
+        </ul>
+        <ul class="opening-hours">
+          <li><b>Aukioloajat</b></li>
+          <li>Ma-Pe</li>
+          <li>10-18</li>
+          <li>La</li>
+          <li>10-14</li>
+          <li>Sunnuntai</li>
+          <li>Suljettu</li>
+        </ul>
+        <div class="socials">
+          <b>Sosiaalinen media</b>
+          <img src="img/some-icons/icons8-facebook.svg" alt="FixIT Facebook" />
+          <img src="img/some-icons/icons8-instagram.svg" alt="FixIT Instagram" />
+          <img src="img/some-icons/icons8-tiktok.svg" alt="FixIT TikTok" />
+          <img src="img/some-icons/icons8-x.svg" alt="FixIT X" />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
-
-

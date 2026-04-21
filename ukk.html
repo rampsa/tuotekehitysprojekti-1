@@ -9,7 +9,7 @@
   <body>
     <header>
       <div class="container">
-        <img src="img/logo/logo_white.png" alt="FixIT Mobile logo" class="logo" />
+        <a href="index.html"><img src="img/logo/logo_white.png" alt="FixIT Mobile logo" class="logo" /></a>
         <nav>
           <input type="checkbox" id="toggle" />
           <label for="toggle" class="hamburger" aria-label="Valikko">
@@ -28,17 +28,19 @@
               </div>
               <div class="quick-cta">
                 <div>
-                  <button>Varaa huolto<i class="iconoir-arrow-right"></i></button>
+                  <a href="ajanvaraus.html"
+                    ><button>Varaa huolto<i class="iconoir-arrow-right"></i></button
+                  ></a>
                 </div>
               </div>
             </li>
             <li><a href="index.html">Etusivu</a></li>
             <li><a href="palvelut.html">Palvelut</a></li>
-            <li><a href="ukk.html" class="active">UKK</a></li>
+            <li><a href="ukk.html" class="active">Info</a></li>
             <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
           </ul>
         </nav>
-        <button id="nav-cta">Varaa huolto</button>
+        <a href="ajanvaraus.html" id="nav-cta" class="no-link-hover"><button>Varaa huolto</button></a>
       </div>
     </header>
     <main>
@@ -81,9 +83,9 @@
           <form>
             <div class="content">
               <div class="input">
-                <input type="text" id="nimi" name="nimi" placeholder="Nimi">
-                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti">
-                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero">
+                <input type="text" id="nimi" name="nimi" placeholder="Nimi" />
+                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti" />
+                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero" />
               </div>
               <textarea id="viesti" name="viesti" placeholder="Kirjoita viestisi tähän..."></textarea>
             </div>
