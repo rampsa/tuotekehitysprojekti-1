@@ -48,49 +48,90 @@
         <section class="faq">
           <h2>Usein kysytyt kysymykset</h2>
           <p>Mietityttääkö jokin asia? Ei hätää, tältä sivulta löydät vastauksia usein kysyttyihin kysymyksiin!</p>
-          <details>
-            <summary>Kuinka nopeasti laite voidaan korjata?</summary>
-            <p>Useimmat korjaukset, kuten näytön tai akun vaihto, valmistuvat saman päivän aikana. Monimutkaisemmat viat voivat vaatia lisäaikaa, mutta kerromme aina tarkan arvion etukäteen.</p>
-          </details>
-          <details>
-            <summary>Tarvitsenko ajanvarauksen?</summary>
-            <p>Et tarvitse. Voit tulla suoraan liikkeeseen tai ottaa yhteyttä etukäteen. Ajanvaraus nopeuttaa asiointia, mutta ei ole pakollinen.</p>
-          </details>
-          <details>
-            <summary>Paljonko korjaus maksaa?</summary>
-            <p>Hinta riippuu laitteesta ja viasta. Teemme maksuttoman diagnoosin ja annamme selkeän kustannusarvion ennen työn aloittamista, ilman lisäkuluja. Suuntaa-antavan hinta-arvion löydät <a href="palvelut.html#hinnasto">hinnastostamme</a>.</p>
-          </details>
-          <details>
-            <summary>Käytättekö alkuperäisiä osia?</summary>
-            <p>Käytämme korkealaatuisia ja testattuja varaosia, jotka vastaavat alkuperäisten tasoa. Kaikille osille ja töille myönnetään takuu.</p>
-          </details>
-          <details>
-            <summary>Mitä jos laitetta ei voida korjata?</summary>
-            <p>Jos korjaus ei ole mahdollista tai se ei ole taloudellisesti järkevää, kerromme siitä rehellisesti. Diagnoosi on aina maksuton.</p>
-          </details>
-          <details>
-            <summary>Saanko takuun korjaukselle?</summary>
-            <p>Kyllä. Kaikkiin korjauksiin sisältyy takuu, jonka pituus riippuu työn tyypistä ja varaosista.</p>
-          </details>
-          <details>
-            <summary>Voinko tuoda minkä tahansa merkin laitteen?</summary>
-            <p>Kyllä. Huollamme kaikkien yleisimpien valmistajien puhelimet ja tietokoneet.</p>
-          </details>
+          <div class="inner">
+            <details class="card">
+              <summary>
+                <i class="iconoir-clock"></i>
+                <span>Kuinka nopeasti laite voidaan korjata?</span>
+                <i class="iconoir-arrow-down selector"></i>
+              </summary>
+              <p>Useimmat korjaukset, kuten näytön tai akun vaihto, valmistuvat saman päivän aikana. Monimutkaisemmat viat voivat vaatia lisäaikaa, mutta kerromme aina tarkan arvion etukäteen.</p>
+            </details>
+            <details class="card">
+              <summary>
+                <i class="iconoir-calendar-check"></i>
+                <span>Tarvitsenko ajanvarauksen?</span>
+                <i class="iconoir-arrow-down selector"></i>
+              </summary>
+              <p>Et tarvitse. Voit tulla suoraan liikkeeseen tai ottaa yhteyttä etukäteen. Ajanvaraus nopeuttaa asiointia, mutta ei ole pakollinen.</p>
+            </details>
+            <details class="card">
+              <summary>
+                <i class="iconoir-euro"></i>
+                <span>Paljonko korjaus maksaa?</span>
+                <i class="iconoir-arrow-down selector"></i>
+              </summary>
+              <p>Hinta riippuu laitteesta ja viasta. Teemme maksuttoman diagnoosin ja annamme selkeän kustannusarvion ennen työn aloittamista, ilman lisäkuluja. Suuntaa-antavan hinta-arvion löydät <a href="palvelut.html#hinnasto">hinnastostamme</a>.</p>
+            </details>
+            <details class="card">
+              <summary>
+                <i class="iconoir-laptop-fix"></i>
+                <span>Käytättekö alkuperäisiä osia?</span>
+                <i class="iconoir-arrow-down selector"></i>
+              </summary>
+              <p>Käytämme korkealaatuisia ja testattuja varaosia, jotka vastaavat alkuperäisten tasoa. Kaikille osille ja töille myönnetään takuu.</p>
+            </details>
+            <details class="card">
+              <summary>
+                <i class="iconoir-xmark-circle"></i>
+                <span>Mitä jos laitetta ei voida korjata?</span>
+                <i class="iconoir-arrow-down selector"></i>
+              </summary>
+              <p>Jos korjaus ei ole mahdollista tai se ei ole taloudellisesti järkevää, kerromme siitä rehellisesti. Diagnoosi on aina maksuton.</p>
+            </details>
+            <details class="card">
+              <summary>
+                <i class="iconoir-clipboard-check"></i>
+                <span>Saanko takuun korjaukselle?</span>
+                <i class="iconoir-arrow-down selector"></i>
+              </summary>
+              <p>Kyllä. Kaikkiin korjauksiin sisältyy takuu, jonka pituus riippuu työn tyypistä ja varaosista.</p>
+            </details>
+            <details class="card">
+              <summary>
+                <i class="iconoir-thumbs-up"></i>
+                <span>Voinko tuoda minkä tahansa merkin laitteen?</span>
+                <i class="iconoir-arrow-down selector"></i>
+              </summary>
+              <p>Kyllä. Huollamme kaikkien yleisimpien valmistajien puhelimet ja tietokoneet.</p>
+            </details>
+          </div>
         </section>
+
         <section class="contact-form">
           <h2>Ota yhteyttä!</h2>
           <p>Etkö löytänyt vastausta kysymykseesi? Ota meihin yhteyttä alla olevan yhteydenottolomakkeen kautta.</p>
+
           <form>
-            <div class="content">
-              <div class="input">
-                <input type="text" id="nimi" name="nimi" placeholder="Nimi" />
-                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti" />
-                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero" />
-              </div>
-              <textarea id="viesti" name="viesti" placeholder="Kirjoita viestisi tähän..."></textarea>
+            <div class="details">
+              <label for="name">Nimi</label>
+              <input type="text" id="name" name="name" placeholder="Etunimi Sukunimi" />
+              <label for="email">Sähköpostiosoite</label>
+              <input type="email" id="email" name="email" placeholder="sinä@verkkotunnus.fi" />
+              <label for="selection">Mitä asiasi koskee</label>
+              <select name="selection" id="selection">
+                <option>Valitse vaihtoehto</option>
+                <option value="1">Laitehuolto</option>
+                <option value="2">Hinta-arvio</option>
+                <option value="3">Takuu</option>
+              </select>
             </div>
-            <button type="submit">Lähetä viesti</button>
+            <div class="message">
+              <label for="message">Viesti</label>
+              <textarea name="message" id="message">Kirjoita viestisi tähän.</textarea>
+            </div>
           </form>
+          <button>Lähetä viestisi</button>
         </section>
       </div>
     </main>

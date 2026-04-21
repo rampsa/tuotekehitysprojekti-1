@@ -1,57 +1,60 @@
 .faq {
   padding: var(--default-padding);
+  transition: all 0.2s ease;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-margin);
+
+    details[open] summary .selector {
+      transform: rotate(180deg);
+    }
 
     details {
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: var(--default-padding);
-        margin-bottom: var(--default-margin);
-    }
+      margin: 0;
 
-    details summary {
+      summary {
         cursor: pointer;
-    }
+        display: flex;
+        align-items: center;
+        gap: var(--default-margin);
+        user-select: none;
 
-    details p {
-        font-style: italic;
+        span {
+          flex-grow: 1;
+        }
+
+        .selector {
+          font-size: var(--base-font-size);
+        }
+
+        i {
+          font-size: 2rem;
+          color: rgba(var(--teal), 1);
+        }
+      }
     }
+  }
 }
 
 .contact-form {
-    margin-left: var(--default-padding);
-    margin-bottom: var(--default-padding);
-
-    form {
-        display: flex;
-        flex-direction: column;
-        max-width: 80%;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .input {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-
-    textarea {
-        flex: 1;
-    }
-
-    button {
-        align-self: flex-start;
-    }
-
+  padding: var(--default-padding);
 }
-
-
-
 /* Breakpoint 640px */
 @media (min-width: 640px) {
+  .faq {
+    .inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--default-margin);
+      align-items: start;
+
+      details {
+        height: fit-content;
+      }
+    }
+  }
 }
 
 /* Breakpoint 768px */
@@ -60,10 +63,4 @@
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
-    .contact-form {
-        .content {
-            flex-direction: row;
-            gap: var(--default-margin);
-        }
-    }
 }

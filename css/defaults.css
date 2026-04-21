@@ -434,12 +434,12 @@ form textarea {
 /* #endregion*/
 
 /* #region Breakpoint 640px */
-@media (min-width: 641px) {
+@media (min-width: 640px) {
 }
 /* #endregion */
 
 /* #region Breakpoint 768px */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   /* Lomakkeet */
   form {
     display: flex;
@@ -464,6 +464,6 @@ form textarea {
 /* #endregion */
 
 /* #region Breakpoint 1024px */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 }
 /* #endregion */
