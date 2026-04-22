@@ -3,8 +3,8 @@ footer .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--default-margin);
-  background-color: rgb(var(--fog));
-  color: rgb(var(--slate));
+  background-color: var(--fog);
+  color: var(--slate);
 
   .logo {
     grid-column: 1 / -1;

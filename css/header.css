@@ -10,7 +10,7 @@ header {
 }
 
 header .container {
-  background-color: #fff;
+  background-color: #ffffff;
   height: 4rem;
   display: flex;
   flex-direction: row;
@@ -18,8 +18,8 @@ header .container {
   align-items: flex-end;
   padding: var(--default-padding);
   box-shadow:
-    0 4px 5px -4px rgba(var(--slate), 0.1),
-    0 4px 15px rgba(var(--slate), 0.1);
+    0 4px 5px -4px color-mix(in srgb, var(--slate), transparent 90%),
+    0 4px 15px color-mix(in srgb, var(--slate), transparent 90%);
 
   .logo {
     height: 2rem;
@@ -39,7 +39,7 @@ header .container {
       span {
         width: 30px;
         height: 3px;
-        background: rgb(var(--slate));
+        background: var(--slate);
         margin-bottom: 6px;
         transition: all 0.3s ease;
         border-radius: calc(var(--default-border-radius) / 4);
@@ -60,7 +60,7 @@ header .container {
       left: 0;
       top: 4rem;
       list-style-type: none;
-      background-color: rgb(var(--fog));
+      background-color: var(--fog);
       opacity: 0;
       z-index: 100;
 
@@ -75,7 +75,7 @@ header .container {
       }
 
       a {
-        color: rgb(var(--slate));
+        color: var(--slate);
       }
 
       .nav-links-quick {
@@ -87,7 +87,7 @@ header .container {
         .quick-contact,
         .quick-cta {
           flex: 1;
-          border-bottom: 1px solid rgba(var(--graphite), 0.2);
+          border-bottom: 1px solid color-mix(in srgb, var(--graphite), transparent 80%);
         }
 
         .quick-contact div,
@@ -96,7 +96,7 @@ header .container {
         }
 
         .quick-contact {
-          border-right: 1px solid rgba(var(--graphite), 0.2);
+          border-right: 1px solid color-mix(in srgb, var(--graphite), transparent 80%);
 
           p {
             margin: 0;
@@ -177,7 +177,7 @@ header .container {
         height: 0.12rem;
         bottom: -0.12rem;
         left: 0;
-        background: rgb(var(--teal));
+        background: var(--teal);
       }
     }
   }

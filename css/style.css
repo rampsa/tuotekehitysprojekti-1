@@ -1,8 +1,8 @@
 /* Muuttujat cheatsheet
-  --slate: 34, 40, 49;
-  --graphite: 113, 117, 125;
-  --teal: 0, 173, 181;
-  --fog: 238, 238, 238;
+  --slate: rgb(34, 40, 49);
+  --graphite: rgb(113, 117, 125);
+  --teal: rgb(0, 173, 181);
+  --fog: rgb(238, 238, 238);
 
   --base-font-size: 16px;
   --font-family: "DM Sans", sans-serif;
@@ -33,14 +33,14 @@
 @import "ajanvaraus.css";
 
 body {
-  background-color: rgb(255, 255, 255);
-  background-image: repeating-linear-gradient(45deg, rgba(var(--fog), 0.1) 0, rgba(var(--fog), 0.8) 1px, transparent 0, transparent 50%);
+  background-color: #ffffff;
+  background-image: repeating-linear-gradient(45deg, color-mix(in srgb, var(--fog), transparent 90%) 0, color-mix(in srgb, var(--fog), transparent 20%) 1px, transparent 0, transparent 50%);
   background-size: 10px 10px;
 }
 
 .container {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 4px 15px rgba(var(--slate), 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--slate), transparent 90%);
 }
 
 /* Breakpoint 640px */

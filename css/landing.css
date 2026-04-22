@@ -12,7 +12,7 @@
     text-align: center;
 
     p {
-      color: rgb(var(--slate));
+      color: var(--slate);
       max-width: 40ch;
       text-align: center;
     }
@@ -43,7 +43,7 @@
         i {
           display: inline-block;
           font-size: 1rem;
-          color: rgb(var(--fog));
+          color: var(--fog);
         }
       }
     }
@@ -151,7 +151,7 @@
           }
 
           i {
-            color: rgb(var(--teal));
+            color: var(--teal);
             font-size: 0.8rem;
           }
         }
@@ -191,7 +191,7 @@
         i {
           display: block;
           font-size: 8rem;
-          color: rgb(var(--teal), 0.3);
+          color: color-mix(in srgb, var(--teal), transparent 70%);
         }
       }
     }
