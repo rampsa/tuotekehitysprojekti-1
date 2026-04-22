@@ -145,6 +145,7 @@
         .details {
           p {
             font-size: var(--h4-font-size);
+            font-weight: 500;
             margin: 0;
             line-height: 1;
           }
@@ -156,8 +157,9 @@
         }
       }
       .message {
-        h6 {
-          margin: calc(var(--default-margin) / 2) 0;
+        .cite {
+          font-size: var(--h6-font-size);
+          font-weight: 500;
         }
       }
     }
