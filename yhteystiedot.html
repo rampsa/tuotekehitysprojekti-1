@@ -45,48 +45,61 @@
     </header>
     <main>
       <div class="container">
-        <section class="contacts">
-          <h2>Yhteystiedot</h2>
-          <div class="cards">
-            <div class="card">
-              <h3>Yhteystiedot</h3>
-              <ul class="card-content">
-                <li>Kuntokatu 3</li>
-                <li>+358 00 1234567</li>
-                <li>33520 Tampere</li>
-                <li><a href="mailto:asiakaspalvelu@fixit.fi">asiakaspalvelu@fixit.fi</a></li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Aukioloajat</h3>
-              <ul class="card-content">
-                <li>Ma-Pe</li>
-                <li>10-18</li>
-                <li>La</li>
-                <li>10-14</li>
-                <li>Sunnuntai</li>
-                <li>Suljettu</li>
-              </ul>
-            </div>
-            <div class="map-card">
+        <section class="contact-info">
+          <div class="inner">
+            <div class="map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1600.6817613447456!2d23.809714274627733!3d61.503833853027366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfi!2sfi!4v1776695895169!5m2!1sfi!2sfi" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+            </div>
+            <div class="information">
+              <h2>Yhteystiedot</h2>
+              <div class="inner">
+                <ul class="customer-service">
+                  <li><p class="text-accent">Asiakaspalvelu</p></li>
+                  <li>+358 00 1234567</li>
+                  <li><a href="mailto:asiakaspalvelu@fixit.fi">asiakaspalvelu@fixit.fi</a></li>
+                </ul>
+                <ul class="office">
+                  <li><p class="text-accent">Asiointi paikan päällä</p></li>
+                  <li>Kuntokatu 3</li>
+                  <li>33520 Tampere</li>
+                </ul>
+                <ul class="hours">
+                  <li><p class="text-accent">Aukioloajat</p></li>
+                  <li><span>Ma - Pe</span></li>
+                  <li>10-18</li>
+                  <li>La</li>
+                  <li>10-14</li>
+                  <li>Su</li>
+                  <li>Suljettu</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
         <section class="contact-form">
-          <h2>Ota yhteyttä!</h2>
-          <p>Ota meihin yhteyttä alla olevan yhteydenottolomakkeen kautta.</p>
+          <h2>Ota yhteyttä</h2>
+          <p>Jos asiasi ei ole kiireellinen ja haluat tiedustella mitä tahansa mobiililaitteisiin, niiden huoltoon tai takuuseen liittyviä asioita, laita meille viesti alla olevalla lomakkeella. Kiireellisissä asioissa ota yhteyttä puhelimitse tai sähköpostilla.</p>
           <form>
-            <div class="content">
-              <div class="input">
-                <input type="text" id="nimi" name="nimi" placeholder="Nimi" />
-                <input type="email" id="sposti" name="sposti" placeholder="Sähköposti" />
-                <input type="tel" id="pnumero" name="pnumero" placeholder="Puhelinnumero" />
-              </div>
-              <textarea id="viesti" name="viesti" placeholder="Kirjoita viestisi tähän..."></textarea>
+            <div class="details">
+              <label for="name">Nimi</label>
+              <input type="text" id="name" name="name" placeholder="Etunimi Sukunimi" />
+              <label for="email">Sähköpostiosoite</label>
+              <input type="email" id="email" name="email" placeholder="sinä@verkkotunnus.fi" />
+              <label for="selection">Mitä asiasi koskee?</label>
+              <select name="selection" id="selection">
+                <option>Valitse vaihtoehto</option>
+                <option value="1">Laitteita</option>
+                <option value="2">Huoltoa</option>
+                <option value="3">Takuuasioita</option>
+                <option value="4">Muut asiat</option>
+              </select>
             </div>
-            <button type="submit">Lähetä viesti</button>
+            <div class="message">
+              <label for="message">Viesti</label>
+              <textarea name="message" id="message">Kirjoita viestisi tähän</textarea>
+            </div>
           </form>
+          <button>Lähetä viesti</button>
         </section>
       </div>
     </main>

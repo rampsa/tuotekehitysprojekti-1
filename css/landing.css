@@ -31,7 +31,6 @@
   padding: var(--default-padding);
 
   .inner {
-    margin-bottom: var(--default-padding);
     .services-cta {
       i {
         display: none;
@@ -116,6 +115,7 @@
 .landing-feedback {
   padding: var(--default-padding);
   .inner {
+    margin-top: var(--default-margin);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--default-margin);

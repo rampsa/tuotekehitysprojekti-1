@@ -1,80 +1,43 @@
-.contacts {
-  padding: var(--default-padding);
-
-  .cards {
-    display: column;
-    gap: 20px;
-    align-items: strech;
-    
-    ul {
-      list-style-type: none;
-    }
-
-    .card-content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: min-content;
-    }
-
-    .map-card {
-      margin: var(--default-margin) 0;
-      padding: 0;
-      background-color: #fff;
-      border: 1px solid rgba(var(--slate), 0.1);
-      border-radius: var(--default-border-radius);
-      box-shadow: 0 2px 8px rgba(var(--slate), 0.07);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      height: 300px;
-      grid-column: span 2;
-
+.contact-info {
+  .inner {
+    .map {
       iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
-        border-radius: var(--default-border-radius);
+        height: 15rem;
+      }
+    }
+    .information {
+      padding: var(--default-padding);
+
+      h2 {
+        margin: 0 0 var(--default-margin);
+      }
+
+      .inner {
+        display: grid;
+        gap: var(--default-margin);
+        grid-template-columns: 1fr 1fr;
+        ul {
+          list-style-type: none;
+        }
+        .hours {
+          grid-column: 1/-1;
+          display: grid;
+          gap: 0 var(--default-margin);
+          grid-template-columns: repeat(2, 1fr);
+
+          li:first-of-type {
+            grid-column: 1/-1;
+          }
+        }
       }
     }
   }
 }
 
-
 .contact-form {
-    margin-left: var(--default-padding);
-    margin-bottom: var(--default-padding);
-
-    form {
-        display: flex;
-        flex-direction: column;
-        max-width: 80%;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .input {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-
-    textarea {
-        flex: 1;
-    }
-
-    button {
-        align-self: flex-start;
-    }
-
+  padding: var(--default-padding);
 }
-
-
-
 
 /* Breakpoint 640px */
 @media (min-width: 640px) {
@@ -82,18 +45,21 @@
 
 /* Breakpoint 768px */
 @media (min-width: 768px) {
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .contact-info {
+    .inner {
+      .information {
+        .inner {
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .hours {
+            grid-column: auto;
+          }
+        }
+      }
+    }
   }
 }
 
 /* #region Breakpoint 1024px */
 @media (min-width: 1024px) {
-  .contact-form {
-    .content {
-      flex-direction: row;
-      gap: var(--default-margin);
-    }
-  }
 }
