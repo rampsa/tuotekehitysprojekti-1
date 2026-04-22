@@ -3,10 +3,10 @@
 @import url("https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css");
 
 :root {
-  --slate: 34, 40, 49; /* Teksti, otsikot */
-  --graphite: 113, 117, 125; /* Toissijainen teksti */
-  --teal: 1, 141, 148; /* Tehosteväri */
-  --fog: 238, 238, 238; /* Tausta */
+  --slate: 34 40 49;
+  --graphite: 113 117 125;
+  --teal: 1 141 148;
+  --fog: 238 238 238;
 
   --base-font-size: 16px;
   --font-family: "DM Sans", sans-serif;
@@ -97,7 +97,7 @@ p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--slate);
+  color: rgb(var(--slate));
 }
 
 .text-accent {
