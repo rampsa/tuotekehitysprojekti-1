@@ -36,7 +36,7 @@
         display: none;
       }
 
-      button {
+      button a {
         display: inline-flex;
         align-items: center;
         gap: calc(var(--default-margin) / 2);
@@ -71,8 +71,9 @@
     .card-lower {
       padding: var(--default-padding);
 
-      h4 {
-        margin: 0;
+      .service {
+        font-size: var(--h4-font-size);
+        margin: calc(var(--default-margin) / 2) 0;
       }
 
       a {

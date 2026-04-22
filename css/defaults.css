@@ -307,6 +307,15 @@ button:hover::before {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+button a {
+  color: rgb(var(--fog)) !important;
+}
+
+.btn-secondary a {
+  color: rgb(var(--graphite)) !important;
+}
+
 /* #endregion */
 
 /* #region Lomakkeet */
