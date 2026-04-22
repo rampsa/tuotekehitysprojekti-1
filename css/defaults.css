@@ -3,10 +3,10 @@
 @import url("https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css");
 
 :root {
-  --slate: 34 40 49;
-  --graphite: 113 117 125;
-  --teal: 1 141 148;
-  --fog: 238 238 238;
+  --slate: 34, 40, 49;
+  --graphite: 113, 117, 125;
+  --teal: 1, 141, 148;
+  --fog: 238, 238, 238;
 
   --base-font-size: 16px;
   --font-family: "DM Sans", sans-serif;
