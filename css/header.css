@@ -9,10 +9,6 @@ header {
   display: none;
 }
 
-#nav-cta a {
-  color: rgb(var(--fog));
-}
-
 header .container {
   background-color: #fff;
   height: 4rem;
@@ -111,8 +107,7 @@ header .container {
           display: flex;
           justify-content: flex-end;
 
-          button a {
-            color: rgb(var(--fog));
+          a {
             display: inline-flex;
             align-items: center;
             justify-content: center;

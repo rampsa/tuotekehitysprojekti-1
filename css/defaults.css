@@ -243,13 +243,14 @@ a:hover::after {
 /* #endregion */
 
 /* #region Napit */
-button {
+button,
+.btn {
   font-family: var(--font-family);
   font-size: calc(var(--base-font-size) * 0.8);
   text-transform: uppercase;
   padding: calc(var(--default-padding) / 2) var(--default-padding);
   background-color: rgb(var(--teal));
-  color: rgb(var(--fog));
+  color: rgb(var(--fog)) !important;
   border: none;
   border-radius: calc(var(--default-border-radius) / 4);
   cursor: pointer;
@@ -258,7 +259,8 @@ button {
   z-index: 1;
 }
 
-button::before {
+button::before,
+.btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -270,12 +272,13 @@ button::before {
   z-index: -1;
 }
 
-button:hover::before {
+button:hover::before,
+.btn:hover::before {
   left: 0;
 }
 
 .btn-secondary {
-  color: rgb(var(--graphite));
+  color: rgb(var(--graphite)) !important;
   background-color: rgba(var(--fog));
 }
 
@@ -308,13 +311,13 @@ button:hover::before {
   cursor: not-allowed;
 }
 
-button a {
+/* button a {
   color: rgb(var(--fog)) !important;
 }
 
 .btn-secondary a {
   color: rgb(var(--graphite)) !important;
-}
+} */
 
 /* #endregion */
 

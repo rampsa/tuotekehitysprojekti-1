@@ -36,7 +36,7 @@
         display: none;
       }
 
-      button a {
+      a {
         display: inline-flex;
         align-items: center;
         gap: calc(var(--default-margin) / 2);
@@ -143,8 +143,10 @@
         }
 
         .details {
-          h4 {
+          p {
+            font-size: var(--h4-font-size);
             margin: 0;
+            line-height: 1;
           }
 
           i {
