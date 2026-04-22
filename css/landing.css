@@ -152,6 +152,11 @@
           }
         }
       }
+      .message {
+        h6 {
+          margin: calc(var(--default-margin) / 2) 0;
+        }
+      }
     }
   }
 }
